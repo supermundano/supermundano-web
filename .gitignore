@@ -15,6 +15,9 @@
 # production
 /build
 
+# supermundano
+/src
+
 # misc
 .DS_Store
 *.pem
