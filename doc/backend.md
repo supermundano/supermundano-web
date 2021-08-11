@@ -18,7 +18,7 @@ Run the studio
 
 Deploy the studio
 https://www.sanity.io/docs/deployment
-
+https://supermundano-next.sanity.studio
 
 - Gutenberg Like Blocks
 https://www.sanity.io/blog/creating-custom-content-blocks-gutenberg-vs-sanity
@@ -32,3 +32,4 @@ https://www.sanity.io/docs/localization
 ## GraphQL
 https://blog.logrocket.com/content-management-in-next-js-with-sanity-cms/
 https://www.sanity.io/docs/graphql
+https://www.smashingmagazine.com/2020/12/mdx-stored-sanity-next-js-website/

@@ -8,7 +8,7 @@ const urlFor = source => urlBuilder(client).image(source)
 const twoImagesPreview = ({ value = {} }) => {
   return (
     <div>
-      {value &&
+      {value && value.images &&
         value.images.map(image => (
           <div
             key={image._key}
@@ -29,7 +29,7 @@ const TwoImages = {
   name: 'twoImages',
   title: 'Two Images',
   type: 'object',
-   preview: {
+  preview: {
     select: {
       images: 'images'
     },
@@ -39,28 +39,7 @@ const TwoImages = {
     {
       name: 'images',
       title: 'Imágenes',
-      type: 'array',
-      validation: Rule => Rule.required().min(2).max(2),
-      of: [
-        {
-          name: 'image',
-          title: 'Imagen',
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative text',
-            },
-          ],
-        }
-      ],
-      options: {
-        layout: 'grid',
-      },
+      type: 'twoimages',
     }
   ]
 }

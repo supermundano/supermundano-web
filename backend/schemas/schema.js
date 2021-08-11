@@ -9,6 +9,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import Homepage from './documents/homepage';
 import Project from './documents/project';
 import BlockContent from './blocks/blockContent';
+import images from './types/images';
 import TwoImages from './blocks/twoImages';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -20,6 +21,7 @@ export default createSchema({
   types: schemaTypes.concat([
     Homepage,
     Project,
+    images,
     TwoImages,
     BlockContent,
   ])
