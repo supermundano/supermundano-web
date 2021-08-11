@@ -4,8 +4,9 @@ import Header from './components/header'
 import Footer from './components/footer'
 import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
+import { GetStaticProps } from 'next'
 
-export default function Home( { data } ) {
+export default function Home( { data } : any ) {
   console.log(data);
   const { featured_projects } = data;
   console.log(featured_projects);
@@ -19,15 +20,15 @@ export default function Home( { data } ) {
       </Head>
       <Header/>
       <main className={styles.main}>
-        
+
       </main>
       <Footer/>
     </div>
   )
 }
 
-export async function getStaticProps() {
-  // const { data } = await getSanityContent({
+// https://wallis.dev/blog/nextjs-getstaticprops-and-getstaticpaths-with-typescript
+export const getStaticProps: GetStaticProps = async (context) => {
   const { allHomepage } = await getSanityContent({
     query: `
       ${featuredProjectsQuery}
