@@ -18,3 +18,6 @@
 # Typescript
 - Object Types
 https://www.typescriptlang.org/docs/handbook/2/objects.html
+
+# Nextjs Dynamic Routes
+https://nextjs.org/docs/routing/dynamic-routes

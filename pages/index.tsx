@@ -7,10 +7,6 @@ import { featuredProjectsQuery } from '../lib/queries';
 import { GetStaticProps } from 'next'
 
 export default function Home( { data } : any ) {
-  console.log(data);
-  const { featured_projects } = data;
-  console.log(featured_projects);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +24,7 @@ export default function Home( { data } : any ) {
 }
 
 // https://wallis.dev/blog/nextjs-getstaticprops-and-getstaticpaths-with-typescript
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const { allHomepage } = await getSanityContent({
     query: `
       ${featuredProjectsQuery}

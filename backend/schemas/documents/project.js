@@ -12,7 +12,7 @@ const Project = {
     },
     {
       title: "Slug",
-      name: "sslug",
+      name: "slug",
       type: "slug",
       options: {
         source: 'title',
