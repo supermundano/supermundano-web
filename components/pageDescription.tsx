@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 
 const DescriptionContent = styled.p`
-    font-size: 1.2rem;
     color: white; 
 `;
 
 const DescriptionWrap = styled.div`
-    max-width: 30rem;
+    max-width: 25rem;
 `;
 
 

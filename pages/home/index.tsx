@@ -1,8 +1,8 @@
-import MainHomePage from '../components/mainHomePage'
-import Page from '../components/Page'
-import { getSanityContent } from '../lib/sanity';
-import { featuredProjectsQuery } from '../lib/queries';
-import Project from '../models/project'
+import MainHomePage from '../../components/mainHomePage'
+import Page from '../../components/Page'
+import { getSanityContent } from '../../lib/sanity';
+import { featuredProjectsQuery } from '../../lib/queries';
+import Project from '../../models/project'
 
 
 export default function Home( {data}:any ) {
