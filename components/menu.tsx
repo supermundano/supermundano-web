@@ -15,9 +15,9 @@ export default function Menu( menuItems:MenuLink[] ) {
     return  (
       <div>
           <MenuUl>
-          {Object.entries(menuItems).map(function(menuItem){
+          {Object.entries(menuItems).map(function(menuItem, index){
             
-            return <MenuItem text={menuItem[1].text} url={menuItem[1].url}></MenuItem>
+            return <MenuItem key={index} text={menuItem[1].text} url={menuItem[1].url}></MenuItem>
           })}
           </MenuUl>
       </div>

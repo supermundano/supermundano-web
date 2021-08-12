@@ -1,27 +1,43 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Header from './components/header'
-import Footer from './components/footer'
+import MainHomePage from '../components/mainHomePage'
+import Page from '../components/page'
 import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
 import { GetStaticProps } from 'next'
+import Project from '../models/project'
+import PageDescription from '../components/pageDescription'
 
-export default function Home( { data } : any ) {
+
+export default function Home( {data}:any ) {
+    console.log(data);
+    const  {featured_projects}  = data;
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Supermundano</title>
-        <meta name="description" content="Creative Brands in Context" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header/>
-      <main className={styles.main}>
+    <div className="home">
+      <Page>
 
-      </main>
-      <Footer/>
+        <PageDescription></PageDescription>
+        <MainHomePage {...featured_projects}/>
+      </Page>
     </div>
   )
 }
+
+/*
+
+export function parseToProject(data:Object){
+  var projects:Project[] = [];
+  Object.entries(data).map(function(project){
+    projects.push(
+      new Project(
+        project[1].title,
+        project[1].description,
+        project[1].list_image?.asset?.url
+        ));
+  });
+  return projects;
+}
+*/
+
 
 // https://wallis.dev/blog/nextjs-getstaticprops-and-getstaticpaths-with-typescript
 export const getStaticProps: GetStaticProps = async () => {
@@ -30,7 +46,8 @@ export const getStaticProps: GetStaticProps = async () => {
       ${featuredProjectsQuery}
     `,
   });
-
+  console.log(allHomepage);
+  
   const data = allHomepage[0];
 
   return {

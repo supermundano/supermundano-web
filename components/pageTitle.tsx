@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const CustomTitle = styled.h4`
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: white;
     margin: 0;
 `;
