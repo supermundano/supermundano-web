@@ -11,13 +11,12 @@ const ProjectsGrid = styled.div`
 
 
 export default function ProjectsContainer( projects:Project[] ) {
-    console.log(projects);
     var projectVar;
     return  (
           <ProjectsGrid>
           {Object.entries(projects).map(function(project, index){
             console.log(project[1]);
-            projectVar = new Project(project[1].title, project[1].description, project[1].list_image?.asset?.url);
+            projectVar = new Project(project[1].title, project[1].description, project[1].list_image?.asset?.url, project[1].slug?.current);
             return (
                 <ProjectCard key={index} {...projectVar}/>
             )

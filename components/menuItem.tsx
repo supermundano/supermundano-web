@@ -6,7 +6,8 @@ import Link from 'next/link'
 const MenuItemLink = styled.a`
     color: #707070;
     cursor: pointer;
-    padding: 0 0.5rem;
+    padding: 0 2vw;
+    font-weight: 400;
 `;
 
 export default function MenuItem(menuLink:MenuLink) {

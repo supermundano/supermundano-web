@@ -15,17 +15,3 @@ export default function MainHomePage(array:Project[]) {
         </main>
     )
 }
-
-
-
-export async function getStaticProps() {
-    var array:MenuLink[];
-    array = [
-        new MenuLink('Behance','#'), 
-        new MenuLink('Instagram','#'), 
-        new MenuLink('LinkedIn','#'), 
-        new MenuLink('Twitter','#')
-    ];
-  
-    return array;
-  }

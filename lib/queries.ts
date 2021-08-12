@@ -4,6 +4,9 @@ export const featuredProjectsQuery = `
       featured_projects{
         _key
         title
+        slug{
+          current
+        }
         description
         list_image{
           asset{

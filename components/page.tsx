@@ -6,11 +6,11 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   body{
     background: black;
-
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding: 40px;
     color: #E2E2E2;
-    font-size: 1rem;
-    font-weight: 100;
+    font-size: 1.2rem;
+    font-weight: 200;
     line-height: 1.3;
   }
 
@@ -23,13 +23,13 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .widget-title{
+    text-transform: uppercase;
     color: #4E4E4E;
     margin: 0;
     margin-bottom: 2.5rem;
-    color: #4E4E4E;
     font-size: 1.4rem;
     line-height: 1.1;
-    font-weight: 300;
+    font-weight: 400;
   }
 `;
 

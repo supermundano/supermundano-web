@@ -27,10 +27,11 @@ const ProjectCardStyle = styled.img`
 
 export default function ProjectCard(project:Project) {
     console.log(project)
+    var slug = "/project/"+ project.slug;
     return (
         <div className="project">
           <ProjectCardStyle/>
-          <Link href="/project/">
+          <Link href={slug}>
             <a>
               <Image src={project.list_image} width="600" height="822" />
               <h3 className="project__title">{project.title}</h3>

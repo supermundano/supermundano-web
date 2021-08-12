@@ -8,8 +8,8 @@ const FooterTag = styled.footer`
     
     a{
         color: #E2E2E2;
-        font-size: 1rem;
-        font-weight: 100;
+        font-size: 1.2rem;
+        font-weight: 200;
         line-height: 1.3;
     }
 
@@ -30,10 +30,10 @@ const FooterTag = styled.footer`
         justify-content: flex-end; 
         align-content: end;
         align-items: end;
-        padding-bottom: 0.8rem;
+        padding-bottom: 1.1rem;
 
         p{
-            margin: 0.3rem;
+            margin: 0.1rem 0.3rem;
             width: 13vw;
         }
 

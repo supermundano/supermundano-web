@@ -1,23 +1,32 @@
-import styled from "styled-components";
+import { createGlobalStyle} from "styled-components";
+import Link from 'next/link'
 
 
-const CustomTitle = styled.h4`
-    font-size: 1.4rem;
-    color: white;
-    margin: 0;
+const GlobalStylePageTitle = createGlobalStyle`
+    .page-title, .page-title *{
+        font-size: 1.4rem !important;
+        color: white;
+        margin: 0 !important;
+        font-weight: 400 !important;
+        .title-secondary{
+            color: #4E4E4E;
+            margin-left: 1rem;
+        }
+    }
 `;
 
-const TitleSpanSecondary = styled.span`
-    color: #4E4E4E;
-    margin-left: 1rem;
-`;
 
 
 export default function PageTitle() {
 
     return(
         <div>
-            <CustomTitle>SUPERMUNDANO ® <TitleSpanSecondary>CREATIVE BRANDS IN CONTEXT</TitleSpanSecondary></CustomTitle>
+            <GlobalStylePageTitle/>
+            <h3 className="page-title">
+                <Link href="/">
+                    <a>SUPERMUNDANO ® <span className="title-secondary">CREATIVE BRANDS IN CONTEXT</span></a>
+                </Link>
+            </h3>
         </div>
     )
 }

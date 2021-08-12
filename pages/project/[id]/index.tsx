@@ -2,17 +2,49 @@ import { useRouter } from 'next/router'
 import { getSanityContent } from '../../../lib/sanity'
 import { allProjectsQuery, singleProjectQuery } from '../../../lib/queries'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { createGlobalStyle } from 'styled-components'
+import Page from '../../../components/page'
+import ProjectFeaturedInfo from '../../../components/projectFeaturedInfo'
+import ProjectEditorInfo from '../../../components/projectEditorInfo'
+
+const GlobalStyleProject = createGlobalStyle`
+  body{
+    background: #F4F4F4 !important;
+    color: black !important;
+  }
+
+  a{
+    color: black !important;
+  }
+
+  .widget-title, .wrap__menu li a, .title-secondary{
+    color: #B4B4B4 !important;
+  }
+  
+`;
 
 const Project = ( { data } : any) => {
+  console.log(data);
+  
   const router = useRouter()
   const { id } = router.query
   const { title } = data
+  const { services } = data
+  const { colaborators } = data
+  const { featured_image } = data
+  const { contentRaw } = data
+  
 
   return (
-    <div className="project">
-      <p>ID: {id}</p>
-      <p>Title: {title}</p>
-    </div>
+    <>
+    <GlobalStyleProject/>
+    <Page>
+      <div className="project">
+        <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
+        <ProjectEditorInfo content_raw={ contentRaw }/>
+      </div>
+    </Page>
+    </>
   )
 }
 

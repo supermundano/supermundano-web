@@ -39,6 +39,7 @@ export default function Header() {
 
     var array:MenuLink[];
     array = [
+        new MenuLink('Home','/'), 
         new MenuLink('Work','/work'), 
         new MenuLink('Services','/services')
     ];
