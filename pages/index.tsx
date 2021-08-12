@@ -2,6 +2,7 @@ import MainHomePage from '../components/mainHomePage'
 import Page from '../components/page'
 import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
+import { GetStaticProps } from 'next'
 import Project from '../models/project'
 import PageDescription from '../components/pageDescription'
 
@@ -37,8 +38,9 @@ export function parseToProject(data:Object){
 }
 */
 
-export async function getStaticProps() {
-  // const { data } = await getSanityContent({
+
+// https://wallis.dev/blog/nextjs-getstaticprops-and-getstaticpaths-with-typescript
+export const getStaticProps: GetStaticProps = async () => {
   const { allHomepage } = await getSanityContent({
     query: `
       ${featuredProjectsQuery}

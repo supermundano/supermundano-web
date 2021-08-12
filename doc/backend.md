@@ -17,6 +17,8 @@ Run the studio
 ```$ sanity start```
 
 Deploy the studio
+```$ sanity graphql deploy```
+
 https://www.sanity.io/docs/deployment
 https://supermundano-next.sanity.studio
 
