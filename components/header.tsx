@@ -1,26 +1,37 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import MenuLink from '../models/links';
 import Menu from './menu'
 import PageTitle from './pageTitle'
-import PageDescription from './pageDescription'
 
 const HeaderTag = styled.header`
     width: 100%; 
 `;
 
-const HeaderMenuWrap = styled.div`
-    display: flex;
-    justify-content: space-between; 
-    align-content: center;
-    align-items: center; 
+const GlobalStyleHeader = createGlobalStyle`
+    header{
+            width: 100%;
+            margin-bottom: 0rem;
 
-    ul{
-        display: flex;
+        .wrap{
+            margin-bottom: 13rem;
+            
+            .home &{
+                margin-bottom: 0;
+            }
+
+            &__menu{
+                display: flex;
+                justify-content: space-between; 
+                align-content: center;
+                align-items: center; 
+
+                ul{
+                    display: flex;
+                }
+            }
+        }
+
     }
-`;
-
-const HeaderAbsoluteWrap = styled.div`
-    margin-bottom: 5rem;
 `;
 
 
@@ -35,15 +46,17 @@ export default function Header() {
 
 
     return(
-        <HeaderTag>
-            <HeaderAbsoluteWrap>
-                <HeaderMenuWrap>
-                    <PageTitle />
-                    <Menu { ...array } />
-                </HeaderMenuWrap>
-                <PageDescription></PageDescription>
-            </HeaderAbsoluteWrap>
-        </HeaderTag>
+        <>
+            <GlobalStyleHeader/>
+            <header>
+                <div className="wrap">
+                    <div className="wrap__menu">
+                        <PageTitle />
+                        <Menu { ...array } />
+                    </div>
+                </div>
+            </header>
+        </>
     )
 }
 

@@ -1,8 +1,9 @@
 import MainHomePage from '../components/mainHomePage'
-import Page from '../components/Page'
+import Page from '../components/page'
 import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
 import Project from '../models/project'
+import PageDescription from '../components/pageDescription'
 
 
 export default function Home( {data}:any ) {
@@ -10,12 +11,17 @@ export default function Home( {data}:any ) {
     const  {featured_projects}  = data;
 
   return (
-    
-    <Page>
-      <MainHomePage {...featured_projects}/>
-    </Page>
+    <div className="home">
+      <Page>
+
+        <PageDescription></PageDescription>
+        <MainHomePage {...featured_projects}/>
+      </Page>
+    </div>
   )
 }
+
+/*
 
 export function parseToProject(data:Object){
   var projects:Project[] = [];
@@ -29,6 +35,7 @@ export function parseToProject(data:Object){
   });
   return projects;
 }
+*/
 
 export async function getStaticProps() {
   // const { data } = await getSanityContent({

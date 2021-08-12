@@ -14,9 +14,8 @@ const FooterTag = styled.footer`
     }
 
     .footer-wrap{
-        margin-bottom: 5rem;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 40% 60%;
     }
 
     .footer-menu-wrap{
@@ -29,33 +28,33 @@ const FooterTag = styled.footer`
     .footer-info-wrap{
         display: flex;
         justify-content: flex-end; 
-        align-content: center;
+        align-content: end;
         align-items: end;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.8rem;
 
         p{
             margin: 0.3rem;
-            padding-right: 5vw;
+            width: 13vw;
+        }
+
+        div{
+            
+            h4{
+                text-align: right;
+            }
+
         }
 
     }
 
     .widget-container{
-        width: 40%;
+        width: 50%;
         padding-right: 5vw;
 
         a{
             padding: 0;
         }
-
-        h4{
-            margin: 0;
-            margin-bottom: 2.5rem;
-            color: #4E4E4E;
-            font-size: 1.4rem;
-            line-height: 1.1;
-            font-weight: 300;
-        }
+        
     }
 
 `;
@@ -78,11 +77,11 @@ export default function Footer() {
             <div className="footer-wrap">
                 <div className="footer-menu-wrap">
                     <div className="widget-container">
-                        <h4>CONTACT</h4>
+                        <h4 className="widget-title">CONTACT</h4>
                         <p>Calle Jorge Juan, 34, 1º<br/>46004 Valencia<br/><a href="mailto:hola@supermundano.com">hola@supermundano.com</a><br/><a href="tel:+34695268598">+34 695 268 598</a></p>
                     </div>
                     <div className="widget-container">
-                        <h4>SOCIAL NETWORKS</h4>
+                        <h4 className="widget-title">SOCIAL NETWORKS</h4>
                         <Menu { ...array } />
                     </div>
                 </div>

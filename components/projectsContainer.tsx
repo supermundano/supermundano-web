@@ -4,7 +4,7 @@ import ProjectCard from './projectCard'
 
 const ProjectsGrid = styled.div`
   display: grid;
-  column-gap: 1rem; 
+  column-gap: 2rem; 
   grid-template-columns: auto auto auto;
   row-gap: 5rem;
 `;

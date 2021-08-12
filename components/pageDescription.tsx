@@ -1,20 +1,21 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-
-const DescriptionContent = styled.p`
-    color: white; 
-`;
-
-const DescriptionWrap = styled.div`
-    max-width: 25rem;
+const GlobalStyleDescription = createGlobalStyle`
+    .page-description-wrap{
+        max-width: 25rem;
+        margin-bottom: 8rem;
+    }
 `;
 
 
 export default function PageDescription() {
 
     return(
-        <DescriptionWrap>
-            <DescriptionContent>Trabajamos la creatividad desde un punto de vista estratégico para contextualizar cada marca en su entorno.</DescriptionContent>
-        </DescriptionWrap>
+        <>
+            <GlobalStyleDescription/>
+            <div className="page-description-wrap">
+                <p>Trabajamos la creatividad desde un punto de vista estratégico para contextualizar cada marca en su entorno.</p>
+            </div>
+        </>
     )
 }

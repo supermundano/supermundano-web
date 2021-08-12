@@ -6,7 +6,7 @@ import Image from 'next/image'
 const ProjectCardStyle = styled.img`
   
   img{
-    width: 100%;
+    width: 100% !important;
     height: auto;
   }
 
@@ -32,7 +32,7 @@ export default function ProjectCard(project:Project) {
           <ProjectCardStyle/>
           <Link href="/project/">
             <a>
-              <Image src={project.list_image} width="516" height="702" />
+              <Image src={project.list_image} width="600" height="822" />
               <h3 className="project__title">{project.title}</h3>
             </a>
           </Link>
