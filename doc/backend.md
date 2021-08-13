@@ -21,6 +21,7 @@ Deploy the studio
 
 https://www.sanity.io/docs/deployment
 https://supermundano-next.sanity.studio
+https://5ltsm4nn.api.sanity.io/v1/graphql/production/default
 
 - Gutenberg Like Blocks
 https://www.sanity.io/blog/creating-custom-content-blocks-gutenberg-vs-sanity
