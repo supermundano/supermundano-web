@@ -18,7 +18,7 @@ export default function ClaimLogo() {
 
     return(
         <ClaimLogoStyles>
-            <Link href="/" passHref>
+            <Link href="/">
                 <a>SUPERMUNDANO ® <span className="title-secondary">CREATIVE BRANDS IN CONTEXT</span></a>
             </Link>
         </ClaimLogoStyles>
