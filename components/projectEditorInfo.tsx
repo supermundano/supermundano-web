@@ -1,36 +1,24 @@
-import { createGlobalStyle} from "styled-components";
+import styled from "styled-components";
 import Image from 'next/image'
 import TwoImages from './projectTwoImages'
 import SanityImage from "./SanityImage";
 
+const ProjectEditorInfoStyle = styled.div`
+  margin-top: 5rem;
+  margin-bottom: 10rem;
 
-const ProjectEditorStyle = createGlobalStyle`
-    .project-editor{
-        margin-top: 5rem;
-        margin-bottom: 10rem;
-
-        p{
-            margin-top: 2.5rem;
-            max-width: 60rem;
-        }
-
-
-    }
-
+  p{
+      margin-top: 2.5rem;
+      max-width: 60rem;
+  }
 `;
-
-
 
 export default function ProjectEditorInfo(content_raw:any) {
 
     return(
         <>
-            <ProjectEditorStyle/>
-            <div className="project-editor">
-                {Object.entries(content_raw.content_raw).map(function(bloque:any, index){
-                    
-                    
-
+            <ProjectEditorInfoStyle>
+                {Object.entries(content_raw.content_raw).map(function(bloque, index){
                     switch(bloque[1]._type){
                         case 'twoImages':
                             //console.log(urlFor(bloque[1].images[0]));
@@ -49,10 +37,9 @@ export default function ProjectEditorInfo(content_raw:any) {
                             <p>{ bloque[1].children[0]?.text }</p>
                         break;
                     }
-                    
+
                 })}
-                
-            </div>
+            </ProjectEditorInfoStyle>
         </>
     )
 }

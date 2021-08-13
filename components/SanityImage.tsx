@@ -14,16 +14,16 @@ export default function SanityImage( image_data :any) {
         dataset: 'production', // use current UTC date - see "specifying API version"!
         useCdn: true, // `false` if you want to ensure fresh data
     })
-    
+
     const imageProps = useNextSanityImage(
         sanityClient ,
         image_data
     );
-        
+
     return (
             <Image {...imageProps} layout="responsive" alt={image_data._key} sizes="(max-width: 800px) 100vw, 800px" />
     );
-        
-    
+
+
 
 }

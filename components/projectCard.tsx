@@ -3,40 +3,34 @@ import Project from '../models/project'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const ProjectCardStyle = styled.img`
-  
+// TODO: Hacer estilos globales para títulos y así poder reutilizarlos DRY
+const ProjectCardStyle = styled.article`
   img{
-    width: 100% !important;
+    width: 100%;
     height: auto;
   }
 
-  .project{
-
-    &__title{
-      margin: 2.5rem 0;
-    }
-
-    &__description{
-
-    }
-
+  .title{
+    font-size: var(--text-size);
+    margin: .5rem 0;
   }
-
 `;
 
-
 export default function ProjectCard(project:Project) {
-    var slug = "/project/"+ project.slug;
+
+    var slug = `project/${project.slug}`;
+
     return (
-        <div className="project">
-          <ProjectCardStyle/>
-          <Link href={slug}>
+      <ProjectCardStyle>
+        <Link href={slug}>
             <a>
-              <Image src={project.list_image} width="600" height="822" />
-              <h3 className="project__title">{project.title}</h3>
+              <Image alt="project.title" src={project.list_image} width="600" height="822" />
             </a>
-          </Link>
-          <p className="project__description">{project.description}</p>
-        </div>
-      )
+        </Link>
+        <h2 className="title">
+          <Link href={slug}><a>{project.title}</a></Link>
+        </h2>
+        <p className="description">{project.description}</p>
+      </ProjectCardStyle>
+    )
 }

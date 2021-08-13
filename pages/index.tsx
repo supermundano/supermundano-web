@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps = async () => {
       ${featuredProjectsQuery}
     `,
   });
-  
   const data = allHomepage[0];
 
   return {

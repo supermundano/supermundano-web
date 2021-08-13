@@ -3,6 +3,9 @@ import Header from './header'
 import Footer from './footer'
 import { createGlobalStyle } from 'styled-components';
 
+// TODO: No estamos haciendo un Reset Global.
+// TODO: Cargar las tipografías no estandar (Helvetica Neue)
+// TODO: Colores a CSS Vars
 const GlobalStyle = createGlobalStyle`
   body{
     background: black;
@@ -17,11 +20,11 @@ const GlobalStyle = createGlobalStyle`
   footer{
     margin-top: 15vh;
   }
-  
+
   main{
     width: 100%;
   }
-  
+
   .widget-title{
     text-transform: uppercase;
     color: #4E4E4E;
