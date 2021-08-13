@@ -21,3 +21,6 @@ https://www.typescriptlang.org/docs/handbook/2/objects.html
 
 # Nextjs Dynamic Routes
 https://nextjs.org/docs/routing/dynamic-routes
+
+# Packages used
+https://www.sanity.io/plugins/next-sanity-image     (Utility for using responsive images hosted on the Sanity.io CDN with the Next.js image component.)

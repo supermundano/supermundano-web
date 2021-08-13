@@ -14,8 +14,7 @@ export default function ProjectsContainer( projects:Project[] ) {
     var projectVar;
     return  (
           <ProjectsGrid>
-          {Object.entries(projects).map(function(project, index){
-            console.log(project[1]);
+          {Object.entries(projects).map(function(project:any, index){
             projectVar = new Project(project[1].title, project[1].description, project[1].list_image?.asset?.url, project[1].slug?.current);
             return (
                 <ProjectCard key={index} {...projectVar}/>

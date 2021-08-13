@@ -26,7 +26,6 @@ const ProjectCardStyle = styled.img`
 
 
 export default function ProjectCard(project:Project) {
-    console.log(project)
     var slug = "/project/"+ project.slug;
     return (
         <div className="project">

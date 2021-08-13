@@ -38,13 +38,12 @@ const GlobalStyleHeader = createGlobalStyle`
 export default function Header() {
 
     var array:MenuLink[];
+    
     array = [
         new MenuLink('Home','/'), 
-        new MenuLink('Work','/work'), 
+        new MenuLink('Work','/'), 
         new MenuLink('Services','/services')
     ];
-
-
 
     return(
         <>

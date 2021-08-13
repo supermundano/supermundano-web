@@ -13,7 +13,6 @@ const TwoImagesStyle = createGlobalStyle`
 
 
 export default function ProjectTwoImages( { image1, image2 }:any ) {
-    console.log("Imágenes");
     
     return(
         <>

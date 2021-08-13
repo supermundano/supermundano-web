@@ -6,13 +6,12 @@ import { featuredProjectsQuery } from '../../lib/queries';
 
 
 export default function Servicios( {data}:any ) {
-    console.log(data);
-    const  {featured_projects}  = data;
+  const  {featured_projects}  = data;
 
   return (
     <div className="services">
       <Page>
-        <ServicesTextSection></ServicesTextSection>
+        <ServicesTextSection/>
         <ServicesListSection></ServicesListSection>
       </Page>
     </div>
@@ -26,9 +25,11 @@ export async function getStaticProps() {
       ${featuredProjectsQuery}
     `,
   });
-  console.log(allHomepage);
   
   const data = allHomepage[0];
+
+  
+  
 
   return {
     props: {

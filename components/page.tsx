@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
 export default function Page({ children }:any) {
 
   return (
+    <>
     <div className="page-container">
       <GlobalStyle />
       <Head>
@@ -47,5 +48,6 @@ export default function Page({ children }:any) {
         <main>{children}</main>
       <Footer/>
     </div>
+    </>
   )
 }

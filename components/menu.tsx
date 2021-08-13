@@ -11,7 +11,6 @@ const MenuUl = styled.ul`
 
 
 export default function Menu( menuItems:MenuLink[] ) {
-    console.log(menuItems);
     return  (
       <div>
           <MenuUl>

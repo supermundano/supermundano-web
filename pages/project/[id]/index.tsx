@@ -7,6 +7,7 @@ import Page from '../../../components/page'
 import ProjectFeaturedInfo from '../../../components/projectFeaturedInfo'
 import ProjectEditorInfo from '../../../components/projectEditorInfo'
 
+
 const GlobalStyleProject = createGlobalStyle`
   body{
     background: #F4F4F4 !important;
@@ -23,8 +24,7 @@ const GlobalStyleProject = createGlobalStyle`
   
 `;
 
-const Project = ( { data } : any) => {
-  console.log(data);
+const Project = ( { data } : any ) => {
   
   const router = useRouter()
   const { id } = router.query
@@ -33,7 +33,6 @@ const Project = ( { data } : any) => {
   const { colaborators } = data
   const { featured_image } = data
   const { contentRaw } = data
-  
 
   return (
     <>
@@ -78,7 +77,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   );
 
   const project = allProject[0];
-
+  
   // Pass post data to the page via props
   return { props: { data : project } }
 }

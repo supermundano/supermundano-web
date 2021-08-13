@@ -8,7 +8,6 @@ import PageDescription from '../components/pageDescription'
 
 
 export default function Home( {data}:any ) {
-    console.log(data);
     const  {featured_projects}  = data;
 
   return (
@@ -46,7 +45,6 @@ export const getStaticProps: GetStaticProps = async () => {
       ${featuredProjectsQuery}
     `,
   });
-  console.log(allHomepage);
   
   const data = allHomepage[0];
 

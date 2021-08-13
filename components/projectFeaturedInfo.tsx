@@ -45,11 +45,9 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
                     <h3 className="widget-title">{ title }</h3>
                     <div className="project-services">
                         <h4>Services</h4>
-                        {Object.entries(services).map(function(servicio, num){
+                        {Object.entries(services).map(function(servicio:any, num){
                             return (
-                                <>
                                 <p key={num}>{ servicio[1] } </p>
-                                </>
                             )
                         })}
                     </div>
