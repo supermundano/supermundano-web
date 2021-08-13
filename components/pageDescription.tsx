@@ -1,21 +1,16 @@
-import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
-const GlobalStyleDescription = createGlobalStyle`
-    .page-description-wrap{
-        max-width: 25rem;
-        margin-bottom: 8rem;
-    }
+// TODO: Los anchos máximos y márgenes, tenemos que ver si son refactorizables a CSS Vars para que sean comunes y aplicar en todas partes el mismo vertical/horizontal rythm
+const PageDescriptionStyles = styled.div`
+    max-width: 25rem;
+    margin-bottom: 8rem;
 `;
 
-
+// TODO: Si el componente no lo vamos a reutilizar, entonces no es un componente
 export default function PageDescription() {
-
     return(
-        <>
-            <GlobalStyleDescription/>
-            <div className="page-description-wrap">
-                <p>Trabajamos la creatividad desde un punto de vista estratégico para contextualizar cada marca en su entorno.</p>
-            </div>
-        </>
+        <PageDescriptionStyles>
+            <p>Trabajamos la creatividad desde un punto de vista estratégico para contextualizar cada marca en su entorno.</p>
+        </PageDescriptionStyles>
     )
 }
