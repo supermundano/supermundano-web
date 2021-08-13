@@ -17,6 +17,9 @@ Run the studio
 ```$ sanity start```
 
 Deploy the studio
+```$ sanity deploy```
+
+Deploy the GraphQL API
 ```$ sanity graphql deploy```
 
 https://www.sanity.io/docs/deployment
