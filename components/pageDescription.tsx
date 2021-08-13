@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 // TODO: Los anchos máximos y márgenes, tenemos que ver si son refactorizables a CSS Vars para que sean comunes y aplicar en todas partes el mismo vertical/horizontal rythm
 const PageDescriptionStyles = styled.div`
-    max-width: 25rem;
+    max-width: 41rem;
     margin-bottom: 8rem;
 `;
 

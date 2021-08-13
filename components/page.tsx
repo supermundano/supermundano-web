@@ -8,14 +8,14 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Helvetica Neue Local';
-    src: url('/static/HelveticaNeue.woff2') format('woff2');
+    src: url('/static/HelveticaNeue-Light.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Helvetica Neue Local';
-    src: url('/static/HelveticaNeue-Bold.woff2') format('woff2');
+    src: url('/static/HelveticaNeue.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
   }
@@ -29,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
     --bgSecondary:    #F4F4F4;
     --maxWidth: 83rem;
 
+    --linkColor: var(--brandPrimary);
+
     box-sizing: border-box;
     font-size: 62.5%; /* sets the base font to 10px for easier math. 1.6rem = 16px */
   }
@@ -41,10 +43,11 @@ const GlobalStyle = createGlobalStyle`
     background: black;
     font-family: 'Helvetica Neue Local', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 40px;
-    color: #E2E2E2;
+    color: var(--brandPrimary);
     font-size: 1.6rem;
     font-weight: 200;
-    line-height: 1.3;
+    line-height: 1.2;
+    letter-spacing: .08rem;
   }
 
   footer{
@@ -58,9 +61,11 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
     line-height: 1.2;
+    letter-spacing: 0;
   }
 
   a{
+    color: var(---brandSecondary);
     text-decoration: none;
   }
 `;

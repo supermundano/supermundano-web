@@ -7,6 +7,10 @@ const HeaderStyles = styled.header`
     width: 100%;
     margin-bottom: 0rem;
 
+    h1{
+      margin: 0;
+    }
+
     .wrap{
         margin-bottom: 13rem;
 
@@ -27,7 +31,7 @@ const HeaderStyles = styled.header`
     }
 `;
 
-
+// TODO: H1 en home pero debería cambiar y que otro elemento fuera el H1 en páginas internas
 export default function Header() {
 
     var array:MenuLink[];
@@ -39,16 +43,14 @@ export default function Header() {
     ];
 
     return(
-        <>
-            <HeaderStyles>
-                <div className="wrap">
-                    <div className="wrap__menu">
-                        <h1><ClaimLogo /></h1>
-                        <Menu { ...array } />
-                    </div>
-                </div>
-            </HeaderStyles>
-        </>
+      <HeaderStyles>
+          <div className="wrap">
+              <div className="wrap__menu">
+                  <h1><ClaimLogo /></h1>
+                  <Menu { ...array } />
+              </div>
+          </div>
+      </HeaderStyles>
     )
 }
 

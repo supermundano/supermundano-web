@@ -7,56 +7,47 @@ const FooterTag = styled.footer`
     width: 100%;
 
     a{
-        color: #E2E2E2;
-        font-size: 1.2rem;
-        font-weight: 200;
-        line-height: 1.3;
+      color: var(--brandPrimary);
     }
 
     .footer-wrap{
-        display: grid;
-        grid-template-columns: 40% 60%;
+      display: grid;
+      grid-template-columns: 40% 60%;
     }
 
     .footer-menu-wrap{
-        display: flex;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: end;
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: flex-end;
     }
 
     .footer-info-wrap{
-        display: flex;
-        justify-content: flex-end;
-        align-content: end;
-        align-items: end;
-        padding-bottom: 1.1rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-bottom: 1.1rem;
 
-        p{
-            margin: 0.1rem 0.3rem;
-            width: 13vw;
+      p{
+        margin: 0.1rem 0.3rem;
+        width: 13vw;
+      }
+
+      div{
+        h4{
+          text-align: right;
         }
-
-        div{
-
-            h4{
-                text-align: right;
-            }
-
-        }
-
+      }
     }
 
     .widget-container{
-        width: 50%;
-        padding-right: 5vw;
+      width: 50%;
+      padding-right: 5vw;
 
-        a{
-            padding: 0;
-        }
-
+      a{
+          padding: 0;
+      }
     }
-
 `;
 
 
@@ -69,8 +60,6 @@ export default function Footer() {
         new MenuLink('LinkedIn','#'),
         new MenuLink('Twitter','#')
     ];
-
-
 
     return(
         <FooterTag>

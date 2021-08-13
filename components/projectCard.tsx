@@ -12,7 +12,7 @@ const ProjectCardStyle = styled.article`
 
   .title{
     font-size: var(--text-size);
-    margin: .5rem 0;
+    margin: 1.5rem 0;
   }
 `;
 

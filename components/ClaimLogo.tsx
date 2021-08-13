@@ -2,11 +2,13 @@ import styled from "styled-components";
 import Link from 'next/link'
 
 const ClaimLogoStyles = styled.div`
+  letter-spacing: 0;
+
   a{
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: white;
     margin: 0;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .title-secondary{
