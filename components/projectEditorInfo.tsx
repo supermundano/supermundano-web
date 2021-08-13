@@ -26,13 +26,11 @@ export default function ProjectEditorInfo(content_raw:any) {
                             )
                         break;
                         case 'image':
-                            console.log("Image:");
 
                             return (
                               <SanityImage key={bloque[1]._key} image_data={ bloque[1] }/>
                             )
 
-                            //<Image key={ bloque[1]._key } src={ bloque[1]._key?.asset?._ref } />
                         break;
                         case 'block':
                           return (

@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import Project from '../models/project'
 import Link from 'next/link'
 import Image from 'next/image'
+import {getImageDimensions} from '@sanity/asset-utils'
+import { urlFor } from '../lib/sanity'
 
 
 const ProjectCardStyle = styled.article`
@@ -23,12 +25,16 @@ const ProjectCardStyle = styled.article`
 export default function ProjectCard(project:Project) {
 
     var slug = `project/${project.slug}`;
+    const ref = project.list_image
+    const imageDimensions = getImageDimensions(ref)
+    const imageURL = urlFor(ref).url()
+
 
     return (
       <ProjectCardStyle>
         <Link href={slug}>
             <a>
-              <Image alt="project.title" src={project.list_image} width="600" height="822" />
+              <Image alt="Supermundano" src={ imageURL } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
             </a>
         </Link>
         <h2 className="title">

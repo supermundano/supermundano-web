@@ -1,4 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import  SanityClient  from '@sanity/client'
+import imageUrlBuilder from '@sanity/image-url'
 
 interface SanityQuery {
   query: string;
@@ -20,3 +22,16 @@ export async function getSanityContent({ query, variables = {} } : SanityQuery) 
 
   return data;
 }
+
+
+export function urlFor(source:any) {
+  const builder = imageUrlBuilder(sanityClient)
+  return builder.image(source)
+}
+
+export const sanityClient = SanityClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: 'production', // use current UTC date - see "specifying API version"!
+  useCdn: true, // `false` if you want to ensure fresh data
+})
+
