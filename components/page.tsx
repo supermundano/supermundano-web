@@ -30,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
     --maxWidth: 83rem;
 
     --linkColor: var(--brandPrimary);
+    --transitionTime: .3s;
+    --text-size: 1.6rem;
 
     box-sizing: border-box;
     font-size: 62.5%; /* sets the base font to 10px for easier math. 1.6rem = 16px */
@@ -44,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Helvetica Neue Local', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 40px;
     color: var(--brandPrimary);
-    font-size: 1.6rem;
+    font-size: var(--text-size);
     font-weight: 200;
     line-height: 1.2;
     letter-spacing: .08rem;
@@ -67,6 +69,28 @@ const GlobalStyle = createGlobalStyle`
   a{
     color: var(---brandSecondary);
     text-decoration: none;
+  }
+
+  .link-line{
+    position: relative;
+    text-decoration: none;
+
+    &:after{
+      content: '';
+      background: currentColor;
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      transition: all var(---transitionTime) ease-in-out;
+    }
+
+    &:hover{
+      &:after{
+        width: 100%;
+      }
+    }
   }
 `;
 

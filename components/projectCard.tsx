@@ -3,8 +3,12 @@ import Project from '../models/project'
 import Link from 'next/link'
 import Image from 'next/image'
 
-// TODO: Hacer estilos globales para títulos y así poder reutilizarlos DRY
+
 const ProjectCardStyle = styled.article`
+  a{
+
+  }
+
   img{
     width: 100%;
     height: auto;
