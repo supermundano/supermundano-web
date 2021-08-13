@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import MenuLink from '../models/links';
 import Menu from './menu'
-import PageTitle from './pageTitle'
+import ClaimLogo from './ClaimLogo'
 
 const FooterTag = styled.footer`
-    width: 100%; 
-    
+    width: 100%;
+
     a{
         color: #E2E2E2;
         font-size: 1.2rem;
@@ -20,14 +20,14 @@ const FooterTag = styled.footer`
 
     .footer-menu-wrap{
         display: flex;
-        justify-content: flex-start; 
+        justify-content: flex-start;
         align-content: center;
         align-items: end;
     }
 
     .footer-info-wrap{
         display: flex;
-        justify-content: flex-end; 
+        justify-content: flex-end;
         align-content: end;
         align-items: end;
         padding-bottom: 1.1rem;
@@ -38,7 +38,7 @@ const FooterTag = styled.footer`
         }
 
         div{
-            
+
             h4{
                 text-align: right;
             }
@@ -54,7 +54,7 @@ const FooterTag = styled.footer`
         a{
             padding: 0;
         }
-        
+
     }
 
 `;
@@ -64,9 +64,9 @@ export default function Footer() {
 
     var array:MenuLink[];
     array = [
-        new MenuLink('Behance','#'), 
-        new MenuLink('Instagram','#'), 
-        new MenuLink('LinkedIn','#'), 
+        new MenuLink('Behance','#'),
+        new MenuLink('Instagram','#'),
+        new MenuLink('LinkedIn','#'),
         new MenuLink('Twitter','#')
     ];
 
@@ -87,7 +87,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-info-wrap">
                     <p>2021® Terms</p>
-                    <PageTitle />
+                    <ClaimLogo />
                 </div>
             </div>
         </FooterTag>

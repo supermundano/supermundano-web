@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import MenuLink from '../models/links';
 import Menu from './menu'
-import PageTitle from './pageTitle'
+import ClaimLogo from './ClaimLogo'
 
 const HeaderStyles = styled.header`
     width: 100%;
@@ -42,7 +42,7 @@ export default function Header() {
             <HeaderStyles>
                 <div className="wrap">
                     <div className="wrap__menu">
-                        <PageTitle />
+                        <h1><ClaimLogo /></h1>
                         <Menu { ...array } />
                     </div>
                 </div>
