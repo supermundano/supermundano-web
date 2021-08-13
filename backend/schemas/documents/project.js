@@ -23,6 +23,11 @@ const Project = {
       }
     },
     {
+      title: 'Destacado',
+      name: 'featured',
+      type: 'boolean'
+    },
+    {
       title: 'Descripción corta',
       name: 'description',
       type: 'text'
