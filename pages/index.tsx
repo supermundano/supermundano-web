@@ -20,6 +20,7 @@ export default function Home( {data}:any ) {
 }
 
 // https://wallis.dev/blog/nextjs-getstaticprops-and-getstaticpaths-with-typescript
+
 export const getStaticProps: GetStaticProps = async () => {
   const { allHomepage } = await getSanityContent({
     query: `
