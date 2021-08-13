@@ -18,23 +18,26 @@ export default function ProjectEditorInfo(content_raw:any) {
     return(
         <>
             <ProjectEditorInfoStyle>
-                {Object.entries(content_raw.content_raw).map(function(bloque, index){
+                {Object.entries(content_raw.content_raw).map(function(bloque:any, index){
                     switch(bloque[1]._type){
                         case 'twoImages':
-                            //console.log(urlFor(bloque[1].images[0]));
-                            <TwoImages key={ bloque[1]?._key } image1={ <Image key={ bloque[1]?.images[0]?._key } src={ bloque[1]?.images[0]?.asset?._ref }  /> } image2={ <Image key={ bloque[1]?.images[1]?._key } src={ bloque[1]?.images[0]?.asset?._ref } width="765" height="1000" /> } />
+                            return(
+                            <TwoImages key={ bloque[1]?._key } image1={ bloque[1]?.images[0] } image2={ bloque[1]?.images[1]} />
+                            )
                         break;
                         case 'image':
                             console.log("Image:");
-                            /*
+
                             return (
-                            <SanityImage image_data={ bloque[1] }/>
+                              <SanityImage key={bloque[1]._key} image_data={ bloque[1] }/>
                             )
-                            */
+
                             //<Image key={ bloque[1]._key } src={ bloque[1]._key?.asset?._ref } />
                         break;
                         case 'block':
-                            <p>{ bloque[1].children[0]?.text }</p>
+                          return (
+                            <p key={ bloque[1]._key } >{ bloque[1].children[0]?.text }</p>
+                          )
                         break;
                     }
 
