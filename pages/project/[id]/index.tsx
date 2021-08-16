@@ -21,13 +21,10 @@ const GlobalStyleProject = createGlobalStyle`
   .widget-title, .wrap__menu li a, .title-secondary{
     color: #B4B4B4 !important;
   }
-  
+
 `;
 
 const Project = ( { data } : any ) => {
-  
-  const router = useRouter()
-  const { id } = router.query
   const { title } = data
   const { services } = data
   const { colaborators } = data
@@ -77,7 +74,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   );
 
   const project = allProject[0];
-  
+
   // Pass post data to the page via props
   return { props: { data : project } }
 }
