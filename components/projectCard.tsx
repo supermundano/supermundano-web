@@ -36,7 +36,7 @@ export default function ProjectCard(project:Project) {
       <ProjectCardStyle>
         <Link href={slug}>
             <a>
-              <Image alt="Supermundano" src={ strImageUrl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" placeholder="blur" blurDataURL={placeholderUrl} />
+              <Image alt="Supermundano" src={ strImageUrl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" placeholder="blur" blurDataURL={strPlaceholderUrl} />
             </a>
         </Link>
         <h2 className="title">
