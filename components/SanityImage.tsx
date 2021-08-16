@@ -8,9 +8,9 @@ export default function SanityImage( image_data :any) {
   const imageDimensions = getImageDimensions(ref)
   const imageURL = urlFor(ref).url()
   const strimageurl = (typeof imageURL === 'string') ? imageURL : '';
+  const altText = image_data.image_data?.asset?.altText || 'Imagen Supermundano';
 
-  // TODO: crear alt de la imagen dinámico
   return (
-      <Image alt="Imagen Supermundano" src={ strimageurl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
+      <Image alt={altText} src={ strimageurl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
   );
 }
