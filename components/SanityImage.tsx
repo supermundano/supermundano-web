@@ -2,10 +2,6 @@ import Image from 'next/image'
 import {getImageDimensions} from '@sanity/asset-utils'
 import { urlFor } from '../lib/sanity'
 
-
-
-
-
 export default function SanityImage( image_data :any) {
 
   const ref = image_data.image_data?.asset?._ref
@@ -15,9 +11,6 @@ export default function SanityImage( image_data :any) {
 
   // TODO: crear alt de la imagen dinámico
   return (
-      <Image alt="Supermundano" src={ strimageurl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
+      <Image alt="Imagen Supermundano" src={ strimageurl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
   );
-
-
-
 }
