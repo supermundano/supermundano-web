@@ -9,7 +9,7 @@ const ProjectEditorInfoStyle = styled.div`
 
   p{
       margin-top: 2.5rem;
-      max-width: 60rem;
+      max-width: 80rem;
   }
 `;
 
