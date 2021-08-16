@@ -21,6 +21,7 @@
     "styled-components": "latest"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@types/react": "17.0.16",
     "@types/styled-components": "^5.1.12",
     "babel-plugin-styled-components": "latest",
