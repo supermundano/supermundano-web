@@ -7,9 +7,6 @@ import { urlFor } from '../lib/sanity'
 
 
 const ProjectCardStyle = styled.article`
-  a{
-
-  }
 
   img{
     width: 100%;
