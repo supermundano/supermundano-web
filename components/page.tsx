@@ -47,7 +47,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 40px;
     color: var(--brandPrimary);
     font-size: var(--text-size);
-    font-weight: 200;
     line-height: 1.2;
     letter-spacing: .08rem;
   }
