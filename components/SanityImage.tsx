@@ -6,11 +6,13 @@ export default function SanityImage( image_data :any) {
 
   const ref = image_data.image_data?.asset?._ref
   const imageDimensions = getImageDimensions(ref)
+  const placeholderUrl = urlFor(ref).width(200).url()
+  const strPlaceholderUrl = (typeof placeholderUrl === 'string') ? placeholderUrl : '';
   const imageURL = urlFor(ref).url()
-  const strimageurl = (typeof imageURL === 'string') ? imageURL : '';
+  const strImageUrl = (typeof imageURL === 'string') ? imageURL : '';
   const altText = image_data.image_data?.asset?.altText || 'Imagen Supermundano';
 
   return (
-      <Image alt={altText} src={ strimageurl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
+      <Image alt={altText} src={ strImageUrl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" placeholder="blur" blurDataURL={strPlaceholderUrl} />
   );
 }

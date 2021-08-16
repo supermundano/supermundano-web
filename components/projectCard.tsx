@@ -27,15 +27,16 @@ export default function ProjectCard(project:Project) {
     var slug = `project/${project.slug}`;
     const ref = project.list_image
     const imageDimensions = getImageDimensions(ref)
+    const placeholderUrl = urlFor(ref).width(200).url()
+    const strPlaceholderUrl = (typeof placeholderUrl === 'string') ? placeholderUrl : '';
     const imageURL = urlFor(ref)?.url()
-
-    const strimageurl = (typeof imageURL === 'string') ? imageURL : '';
+    const strImageUrl = (typeof imageURL === 'string') ? imageURL : '';
 
     return (
       <ProjectCardStyle>
         <Link href={slug}>
             <a>
-              <Image alt="Supermundano" src={ strimageurl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" />
+              <Image alt="Supermundano" src={ strImageUrl } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" placeholder="blur" blurDataURL={placeholderUrl} />
             </a>
         </Link>
         <h2 className="title">
