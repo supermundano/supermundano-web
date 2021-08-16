@@ -9,6 +9,12 @@ const HeaderStyles = styled.header`
 
     h1{
       margin: 0;
+
+      a{
+        font-size: 1.6rem;
+        display: block;
+        text-align: center;
+      }
     }
 
     .wrap{
@@ -23,11 +29,34 @@ const HeaderStyles = styled.header`
             justify-content: space-between;
             align-content: center;
             align-items: center;
+            flex-direction: column;
 
             ul{
                 display: flex;
             }
         }
+    }
+
+    @media (min-width: 576px){
+      h1{
+
+        a{
+          font-size: 2rem;
+        }
+
+      }
+
+      .wrap{
+        margin-bottom: 13rem;
+
+        .home &{
+            margin-bottom: 0;
+        }
+
+        &__menu{
+            flex-direction: row;
+        }
+      }
     }
 `;
 
