@@ -6,6 +6,16 @@ import { createGlobalStyle } from 'styled-components';
 // TODO: No estamos haciendo un Reset Global.
 const GlobalStyle = createGlobalStyle`
 
+  --breakpoints: (
+    xs: 360px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1600px
+  );
+
   @font-face {
     font-family: 'Helvetica Neue Local';
     src: url('/static/HelveticaNeue-Light.woff2') format('woff2');
@@ -33,6 +43,11 @@ const GlobalStyle = createGlobalStyle`
     --transitionTime: .3s;
     --text-size: 1.6rem;
 
+    // Breakpoints
+    --sm: 576px;
+    --md: 990px;
+    --lg: 1430px;
+
     box-sizing: border-box;
     font-size: 62.5%; /* sets the base font to 10px for easier math. 1.6rem = 16px */
   }
@@ -47,7 +62,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 40px;
     color: var(--brandPrimary);
     font-size: var(--text-size);
-    font-weight: 200;
     line-height: 1.2;
     letter-spacing: .08rem;
   }

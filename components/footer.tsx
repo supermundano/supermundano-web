@@ -10,43 +10,119 @@ const FooterTag = styled.footer`
       color: var(--brandPrimary);
     }
 
-    .footer-wrap{
-      display: grid;
-      grid-template-columns: 40% 60%;
-    }
-
-    .footer-menu-wrap{
-      display: flex;
-      justify-content: flex-start;
-      align-content: center;
-      align-items: flex-end;
-    }
-
     .footer-info-wrap{
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
       padding-bottom: 1.1rem;
 
       p{
-        margin: 0.1rem 0.3rem;
-        width: 13vw;
+        margin: 2rem 0;
       }
 
       div{
-        h4{
-          text-align: right;
+        display: flex;
+        margin-bottom: 1rem;
+
+        a{
+          text-align: center;
         }
       }
     }
 
     .widget-container{
-      width: 50%;
-      padding-right: 5vw;
+      width: 100%;
+      margin-bottom: 5rem;
 
+      & *{
+        text-align: center;
+      }
       a{
           padding: 0;
       }
+    }
+
+    @media (min-width: 576px){
+      .footer-menu-wrap{
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: flex-end;
+      }
+
+      .footer-info-wrap{
+        margin-top: 2rem;
+        p{
+          margin: 0.1rem 0.35rem;
+        }
+      }
+
+      .widget-container{
+        margin: 0;
+
+        & *{
+          text-align: left;
+        }
+      }
+
+    }
+
+    @media (min-width: 990px){
+      .footer-wrap{
+        display: grid;
+        grid-template-columns: 45% 55%;
+      }
+
+      .footer-info-wrap{
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 0;
+        p{
+          margin: 0.1rem 0.3rem;
+          width: 100%;
+          text-align: right;
+        }
+
+        a{
+          font-size: 1.8rem;
+        }
+        div{
+          margin: 0;
+          h4{
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1400px){
+
+      .footer-wrap{
+        grid-template-columns: 45% 55%;
+      }
+
+      .footer-info-wrap{
+        flex-direction: row;
+
+        p{
+          margin: 0.1rem 0.3rem;
+          width: 13vw;
+          text-align: left;
+        }
+
+        div{
+          h4{
+            text-align: right;
+          }
+        }
+      }
+
+      .widget-container:first-child{
+        padding-right: 5vw;
+      }
+
     }
 `;
 

@@ -4,7 +4,7 @@ import SanityImage from "./SanityImage";
 const TwoImagesStyle = styled.div`
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 4rem;
+  column-gap: 5rem;
   margin-bottom: 5rem;
 `;
 

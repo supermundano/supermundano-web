@@ -3,10 +3,18 @@ import Project from '../models/project'
 import ProjectCard from './projectCard'
 
 const ProjectsContainerStyles = styled.section`
-  display: grid;
-  column-gap: 2rem;
+display: grid;
+column-gap: 2rem;
+grid-template-columns: 100%;
+row-gap: 5rem;
+
+@media (min-width: 576px){
+  grid-template-columns: 50% 50%;
+}
+
+@media (min-width: 990px){
   grid-template-columns: auto auto auto;
-  row-gap: 5rem;
+}
 `;
 
 
