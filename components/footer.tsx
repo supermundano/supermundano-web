@@ -142,11 +142,11 @@ export default function Footer() {
             <div className="footer-wrap">
                 <div className="footer-menu-wrap">
                     <div className="widget-container">
-                        <h4 className="widget-title">CONTACT</h4>
+                        <h4 className="secondary-title">CONTACT</h4>
                         <p>Calle Jorge Juan, 34, 1º<br/>46004 Valencia<br/><a href="mailto:hola@supermundano.com">hola@supermundano.com</a><br/><a href="tel:+34695268598">+34 695 268 598</a></p>
                     </div>
                     <div className="widget-container">
-                        <h4 className="widget-title">SOCIAL NETWORKS</h4>
+                        <h4 className="secondary-title">SOCIAL NETWORKS</h4>
                         <Menu { ...array } />
                     </div>
                 </div>

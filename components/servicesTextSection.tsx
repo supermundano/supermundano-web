@@ -23,7 +23,7 @@ export default function ServicesTextSection() {
   return  (
     <ServicesTextSectionStyle>
       <div className="title">
-          <h2 className="widget-title">INSIGHTS</h2>
+          <h2 className="secondary-title">INSIGHTS</h2>
       </div>
       <div className="text">
         <p>Supermundano es un estudio dedicado al diseño de marca que aúna la consultoría y la creatividad estratégica para que las buenas ideas aterricen con seguridad en el mundo real.</p>

@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import Image from 'next/image'
 
-// TODO: font-weight: 200; no está definido
 // TODO: Por qué project-image es un display: flex con justify-content: end ???
 const ProjectFeaturedInfoStyle = styled.div`
-  display: grid;
-  grid-template-columns: 33% 67%;
+
+  .project-info{
+    margin-bottom: 5rem;
+  }
 
   .project-services{
     margin-bottom: 8rem;
   }
 
   h2{
-    font-weight: 200;
+    font-weight: 300;
     margin-top: 4rem;
   }
 
@@ -24,16 +25,29 @@ const ProjectFeaturedInfoStyle = styled.div`
     display: flex;
     justify-content: end;
   }
+
+  @media (min-width:576px){
+    .project-info{
+      margin-bottom: 5rem;
+    }
+  }
+
+  @media (min-width: 990px){
+    display: grid;
+    grid-template-columns: 33% 67%;
+
+    .project-info{
+      margin-bottom: 0;
+    }
+  }
 `;
 
-// TODO: .widget-title debería tener un nombre mejor, no estamos dentro de un widget
-// TODO: El h3 debería ser un h1
 export default function ProjectFeaturedInfo( {title, services, colabs, featured_image}:any ) {
     return(
         <ProjectFeaturedInfoStyle>
           <div className="project-info">
 
-              <h3 className="widget-title">{ title }</h3>
+              <h1 className="secondary-title">{ title }</h1>
               <div className="project-services">
                   <h2>Services</h2>
                   {Object.entries(services).map(function(servicio, num){

@@ -13,7 +13,7 @@ const ServicesListItemStyle = styled.div`
 export default function ServicesListItem( {title, children}:any ) {
   return  (
     <ServicesListItemStyle>
-      <h2 className="widget-title">{ title }</h2>
+      <h2 className="secondary-title">{ title }</h2>
 
       <div className="text">
           { children }

@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 15vh;
   }
 
-  .widget-title{
+  .secondary-title{
     text-transform: uppercase;
     color: var(--brandFour);
     margin: 0;

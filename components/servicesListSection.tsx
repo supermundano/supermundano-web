@@ -22,7 +22,7 @@ export default function ServicesListSection() {
   return  (
     <ServicesListSectionStyle>
         <div className="title">
-          <h2 className="widget-title">SERVICES</h2>
+          <h2 className="secondary-title">SERVICES</h2>
         </div>
         <div className="wrap">
             <ServicesListItem title="ESTRATEGIA DE MARCA">
