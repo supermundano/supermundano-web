@@ -9,7 +9,7 @@ grid-template-columns: 100%;
 row-gap: 5rem;
 
 @media (min-width: 576px){
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto auto;
 }
 
 @media (min-width: 990px){

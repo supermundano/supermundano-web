@@ -11,7 +11,7 @@ const HeaderStyles = styled.header`
       margin: 0;
 
       a{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         display: block;
         text-align: center;
       }

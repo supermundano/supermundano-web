@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background: black;
     font-family: 'Helvetica Neue Local', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 40px;
+    padding: 30px 20px;
     color: var(--brandPrimary);
     font-size: var(--text-size);
     line-height: 1.2;
@@ -94,6 +94,12 @@ const GlobalStyle = createGlobalStyle`
       &:after{
         width: 100%;
       }
+    }
+  }
+
+  @media (min-width: 576px){
+    body{
+      padding: 40px;
     }
   }
 `;

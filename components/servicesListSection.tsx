@@ -2,8 +2,6 @@ import styled from "styled-components"
 import ServicesListItem from "./servicesListItem"
 
 const ServicesListSectionStyle = styled.div`
-  display: grid;
-  grid-template-columns: 25% 75%;
   margin-bottom: 5rem;
 
   .title h2{
@@ -12,6 +10,11 @@ const ServicesListSectionStyle = styled.div`
 
   p{
     margin: 0;
+  }
+
+  @media (min-width: 576px){
+    display: grid;
+    grid-template-columns: 25% 75%;
   }
 `;
 

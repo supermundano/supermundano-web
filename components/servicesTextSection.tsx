@@ -1,13 +1,20 @@
 import styled from "styled-components"
 
 const ServicesTextSectionStyle = styled.div`
-  display: grid;
-  grid-template-columns: 25% 50%;
   margin-bottom: 5rem;
 
   .title h2,
   .text p{
     margin-top:  0;
+  }
+
+  @media (min-width: 576px){
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+
+  @media (min-width: 990px){
+    grid-template-columns: 25% 50%;
   }
 `;
 
