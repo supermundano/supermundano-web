@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
 
@@ -102,13 +103,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+function App({ Component, pageProps, router }: AppProps) {
 
-
-function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter initial={false} >
+        <Component key={router.route} {...pageProps} />
+      </AnimatePresence>
     </>
   )
 }

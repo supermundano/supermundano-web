@@ -24,3 +24,6 @@ https://nextjs.org/docs/routing/dynamic-routes
 
 # Packages used
 https://www.sanity.io/plugins/next-sanity-image     (Utility for using responsive images hosted on the Sanity.io CDN with the Next.js image component.)
+
+# Con 'onExitComplete' podemos ejecutar código antes de crear una nueva instancia de vista durante la animación
+<AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>

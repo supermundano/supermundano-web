@@ -9,6 +9,11 @@ const ProjectFeaturedInfoStyle = styled.div`
 
   .project-info{
     margin-bottom: 5rem;
+
+    .wrap{
+      width: 100%;
+    }
+
   }
 
   .project-services{
@@ -24,17 +29,6 @@ const ProjectFeaturedInfoStyle = styled.div`
     margin: 0;
   }
 
-  /* .project-image{
-    display: flex;
-    justify-content: end;
-  }
-
-  @media (min-width:576px){
-    .project-info{
-      margin-bottom: 5rem;
-    }
-  }
-
   @media (min-width: 990px){
     display: grid;
     grid-template-columns: 33% 67%;
@@ -43,7 +37,7 @@ const ProjectFeaturedInfoStyle = styled.div`
       margin-bottom: 0;
     }
   }
-  } */
+  }
 `;
 
 export default function ProjectFeaturedInfo( {title, services, colabs, featured_image}:any ) {
