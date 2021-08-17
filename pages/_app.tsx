@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     src: url('/static/HelveticaNeue-Light.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -16,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     src: url('/static/HelveticaNeue.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
   }
 
   html {
