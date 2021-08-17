@@ -40,6 +40,7 @@ const FooterTag = styled.footer`
       }
       a{
           padding: 0;
+          color: white;
       }
     }
 

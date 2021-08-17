@@ -55,6 +55,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--text-size);
     line-height: 1.2;
     letter-spacing: .08rem;
+    margin: 0;
   }
 
   footer{
@@ -74,6 +75,14 @@ const GlobalStyle = createGlobalStyle`
   a{
     color: var(---brandSecondary);
     text-decoration: none;
+    background-size: 0;
+
+     &:hover{
+      background: linear-gradient(var(--brandFour), var(--brandFour)) bottom/0% 2px no-repeat;
+      background-size: 100% 2px;
+      transition: background-size .3s;
+      transition-duration: .3s;
+    }
   }
 
   .link-line{

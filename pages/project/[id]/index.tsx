@@ -19,8 +19,9 @@ const GlobalStyleProject = createGlobalStyle`
   }
 
   .secondary-title, .wrap__menu li a, .title-secondary{
-    color: #B4B4B4 !important;
+    color: var(--brandTertiary) !important;
   }
+
 
 `;
 

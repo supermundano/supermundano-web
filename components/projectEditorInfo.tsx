@@ -4,12 +4,22 @@ import TwoImages from './projectTwoImages'
 import SanityImage from "./SanityImage";
 
 const ProjectEditorInfoStyle = styled.div`
-  margin-top: 5rem;
-  margin-bottom: 10rem;
+  margin-top: 2.5rem;
 
   p{
-      margin-top: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 576px){
+    margin-top: 4rem;
+  }
+
+  @media (min-width: 990px){
+    margin-top: 5rem;
+
+    p{
       max-width: 80rem;
+    }
   }
 `;
 

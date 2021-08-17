@@ -1,9 +1,12 @@
 import styled from "styled-components"
 
-// TODO: Colores a CSS Vars
 const ServicesListItemStyle = styled.div`
-  border-top: 1px solid #4E4E4E;
+  border-top: 1px solid var(--brandFour);
   padding: 5rem 0;
+
+  &:last-child{
+    padding-bottom: 0;
+  }
 
   .text{
     margin: 5rem 0;

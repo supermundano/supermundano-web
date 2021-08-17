@@ -4,7 +4,6 @@ import { getImage } from '@sanity/asset-utils'
 import { sanityClient } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image';
 
-// TODO: Por qué project-image es un display: flex con justify-content: end ???
 const ProjectFeaturedInfoStyle = styled.div`
 
   .project-info{
@@ -37,7 +36,7 @@ const ProjectFeaturedInfoStyle = styled.div`
       margin-bottom: 0;
     }
   }
-  }
+
 `;
 
 export default function ProjectFeaturedInfo( {title, services, colabs, featured_image}:any ) {

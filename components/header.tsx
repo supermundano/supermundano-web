@@ -5,7 +5,7 @@ import ClaimLogo from './ClaimLogo'
 
 const HeaderStyles = styled.header`
     width: 100%;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
 
     h1{
       margin: 0;
@@ -17,8 +17,19 @@ const HeaderStyles = styled.header`
       }
     }
 
+    li {
+      span{
+        margin: 0 1vw;
+        padding: 1rem;
+
+        a{
+          padding: 1rem 1vw;
+        }
+      }
+    }
+
     .wrap{
-        margin-bottom: 13rem;
+        margin-bottom: 8rem;
 
         .home &{
             margin-bottom: 0;
@@ -32,7 +43,8 @@ const HeaderStyles = styled.header`
             flex-direction: column;
 
             ul{
-                display: flex;
+              margin-top: 3rem;
+              display: flex;
             }
         }
     }
@@ -55,6 +67,10 @@ const HeaderStyles = styled.header`
 
         &__menu{
             flex-direction: row;
+
+            ul{
+              margin-top: 0;
+            }
         }
       }
     }

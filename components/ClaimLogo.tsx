@@ -9,11 +9,20 @@ const ClaimLogoStyles = styled.div`
     color: white;
     margin: 0;
     font-weight: 600;
+
+    &:hover{
+      background: none;
+    }
   }
 
   .title-secondary{
-    color: #4E4E4E;
-    margin-left: 1rem;
+    color: var(--brandFour);
+  }
+
+  @media (min-width: 576px){
+    .title-secondary{
+      margin-left: 1rem;
+    }
   }
 `;
 
