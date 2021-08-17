@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Image from 'next/image'
-import {getImageDimensions} from '@sanity/asset-utils'
-import { urlFor } from '../lib/sanity'
+import { getImage } from '@sanity/asset-utils'
+import { sanityClient } from '../lib/sanity'
+import { useNextSanityImage } from 'next-sanity-image';
 
 // TODO: Por qué project-image es un display: flex con justify-content: end ???
 const ProjectFeaturedInfoStyle = styled.div`
@@ -46,9 +47,17 @@ const ProjectFeaturedInfoStyle = styled.div`
 `;
 
 export default function ProjectFeaturedInfo( {title, services, colabs, featured_image}:any ) {
-    const imageDimensions = getImageDimensions(featured_image.asset);
-    const placeholderUrl = urlFor(featured_image).width(200).url()
-    const strPlaceholderUrl = (typeof placeholderUrl === 'string') ? placeholderUrl : '';
+    const listImage = getImage(featured_image.asset)
+    const imageProps = useNextSanityImage(
+      sanityClient,
+      listImage,
+      {
+        blurUpImageWidth: 200,
+        blurUpImageQuality: 40,
+        blurUpAmount: 24
+      }
+    );
+    const src = (typeof imageProps?.src === 'string') ? imageProps?.src : '';
 
     return(
         <ProjectFeaturedInfoStyle>
@@ -73,7 +82,7 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
 
           <div className="project-image">
             <div className="wrap">
-              <Image alt={title} src={ featured_image?.asset?.url } layout="responsive" width={imageDimensions.width} height={imageDimensions.height} sizes="(max-width: 800px) 100vw, 800px" placeholder="blur" blurDataURL={strPlaceholderUrl} />
+              <Image alt={title} src={src} {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" />
             </div>
           </div>
 
