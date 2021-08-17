@@ -32,6 +32,7 @@ export function urlFor(source:any) {
 export const sanityClient = SanityClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: 'production', // use current UTC date - see "specifying API version"!
+  apiVersion: '2021-08-16',
   useCdn: true, // `false` if you want to ensure fresh data
 })
 

@@ -25,9 +25,6 @@ const GlobalStyleProject = createGlobalStyle`
 `;
 
 const Project = ( { data } : any ) => {
-
-  const router = useRouter()
-  const { id } = router.query
   const { title } = data
   const { services } = data
   const { colaborators } = data
