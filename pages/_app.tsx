@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
   a{
     color: var(---brandWhite);
     text-decoration: none;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     transition-duration: .3s;
     transition-delay: 0.1;
 

@@ -47,7 +47,7 @@ const HeaderStyles = styled.header`
                     display: block;
                     content: '';
                     width: 0;
-                    margin-top: 1rem;
+                    margin-top: 0.5rem;
                     height: 1px;
                     background-size: 0 0.1rem;
                     background: linear-gradient(var(--brandFour), var(--brandFour)) 1px no-repeat;
