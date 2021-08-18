@@ -5,9 +5,11 @@ import { sanityClient } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image';
 
 const ProjectFeaturedInfoStyle = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
 
   .project-info{
-    margin-bottom: 5rem;
+    margin-top: 2.5rem;
 
     .wrap{
       width: 100%;
@@ -15,25 +17,64 @@ const ProjectFeaturedInfoStyle = styled.div`
 
   }
 
-  .project-services{
-    margin-bottom: 8rem;
+
+
+  .project-info-columns > div{
+
+    h2{
+      font-weight: 300;
+      margin-top: 4rem;
+      font-size: var(--font-size) !important;
+    }
+
+    p{
+      margin: 0;
+    }
   }
 
-  h2{
-    font-weight: 300;
-    margin-top: 4rem;
+  @media (min-width: 400px){
+    .project-info-columns{
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 1rem;
+
+      & > div{
+
+        h2{
+          margin-top: 0;
+        }
+
+      }
+    }
   }
 
-  p{
-    margin: 0;
+  @media (min-width: 576px){
+    .project-info{
+
+      margin-top: 4rem;
+    }
   }
 
-  @media (min-width: 990px){
+  @media (min-width: 975px){
     display: grid;
     grid-template-columns: 33% 67%;
+    column-gap: 0;
+
+    .project-info-columns{
+      display: block;
+    }
 
     .project-info{
-      margin-bottom: 0;
+      margin: 0;
+
+      h2{
+        margin-top: 4rem;
+      }
+
+    }
+
+    .project-services{
+      margin-bottom: 6rem;
     }
   }
 
@@ -57,18 +98,21 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
           <div className="project-info">
 
               <h1 className="secondary-title">{ title }</h1>
-              <div className="project-services">
-                  <h2>Services</h2>
-                  {Object.entries(services).map(function(servicio, num){
-                      return (
-                          <p key={num}>{ servicio[1] } </p>
-                      )
-                  })}
-              </div>
+              <div className="project-info-columns">
+                <div className="project-services">
+                    <h2>Services</h2>
+                    {Object.entries(services).map(function(servicio, num){
+                        return (
+                            <p key={num}>{ servicio[1] } </p>
+                        )
+                    })}
+                </div>
 
-              <div className="project-colabs">
-                  <h2>Colabs</h2>
-                  <p>{ colabs }</p>
+                <div className="project-colabs">
+                    <h2>Colabs</h2>
+                    <p>{ colabs }</p>
+                </div>
+
               </div>
 
           </div>

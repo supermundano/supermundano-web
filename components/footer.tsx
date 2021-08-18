@@ -6,14 +6,10 @@ import ClaimLogo from './ClaimLogo'
 const FooterTag = styled.footer`
     width: 100%;
 
-    a{
-      color: var(--brandPrimary);
-    }
-
     .footer-info-wrap{
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column-reverse;
       padding-bottom: 1.1rem;
 
@@ -26,7 +22,15 @@ const FooterTag = styled.footer`
         margin-bottom: 1rem;
 
         a{
-          text-align: center;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          font-size: 1.8rem;
+
+          .title-secondary{
+            text-align: left;
+          }
+
         }
       }
     }
@@ -36,11 +40,24 @@ const FooterTag = styled.footer`
       margin-bottom: 5rem;
 
       & *{
-        text-align: center;
+        text-align: left;
+        line-height: 1.5;
       }
+
       a{
           padding: 0;
-          color: white;
+      }
+    }
+
+    @media (min-width: 400px){
+      .footer-info-wrap{
+
+        div{
+
+          a{
+            font-size: 2rem;
+          }
+        }
       }
     }
 
@@ -53,10 +70,11 @@ const FooterTag = styled.footer`
       }
 
       .footer-info-wrap{
-        margin-top: 2rem;
+        margin-top: 5rem;
         p{
           margin: 0.1rem 0.35rem;
         }
+
       }
 
       .widget-container{
@@ -65,21 +83,41 @@ const FooterTag = styled.footer`
         & *{
           text-align: left;
         }
+
+        p,ul{
+
+          margin-bottom: 0;
+        }
       }
 
+    }
+
+    @media (min-width: 600px){
+
+      .footer-info-wrap{
+
+        div{
+
+          a{
+            display: block;
+            flex-direction: row;
+          }
+        }
+      }
     }
 
     @media (min-width: 990px){
       .footer-wrap{
         display: grid;
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 55% 45%;
       }
 
       .footer-info-wrap{
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-end;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 0;
+        padding: 0;
         p{
           margin: 0.1rem 0.3rem;
           width: 100%;
@@ -88,14 +126,45 @@ const FooterTag = styled.footer`
 
         a{
           font-size: 1.8rem;
+          padding: 0;
         }
         div{
           margin: 0;
           h4{
             text-align: right;
           }
+
+          a{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+          }
+        }
+
+        h1{
+
+          .title-secondary{
+
+          }
+
         }
       }
+    }
+
+    @media (min-width: 1200px){
+
+      .footer-info-wrap{
+
+        div{
+
+          a{
+            display: block;
+          }
+
+        }
+
+      }
+
     }
 
     @media (min-width: 1400px){
@@ -105,6 +174,7 @@ const FooterTag = styled.footer`
       }
 
       .footer-info-wrap{
+        justify-content: flex-end;
         flex-direction: row;
 
         p{

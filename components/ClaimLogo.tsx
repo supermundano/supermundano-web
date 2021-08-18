@@ -5,23 +5,19 @@ const ClaimLogoStyles = styled.div`
   letter-spacing: 0;
 
   a{
+    text-align: center;
     font-size: 2rem;
     color: white;
     margin: 0;
     font-weight: 600;
 
     &:hover{
+      color: white;
       background: none;
     }
-  }
 
-  .title-secondary{
-    color: var(--brandFour);
-  }
-
-  @media (min-width: 576px){
     .title-secondary{
-      margin-left: 1rem;
+      color: var(--brandFour);
     }
   }
 `;

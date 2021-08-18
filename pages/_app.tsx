@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     --brandSecondary: #000000;
     --brandTertiary:  #B4B4B4;
     --brandFour:      #4E4E4E;
+    --brandWhite:       white;
     --bgPrimary:      #000000;
     --bgSecondary:    #F4F4F4;
     --maxWidth: 83rem;
@@ -59,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   footer{
-    margin-top: 15vh;
+    margin-top: 12vh;
   }
 
   .secondary-title{
@@ -73,16 +74,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a{
-    color: var(---brandSecondary);
+    color: var(---brandWhite);
     text-decoration: none;
-    background-size: 0;
+    padding-bottom: 1rem;
+    transition-duration: .3s;
+    transition-delay: 0.1;
 
-     &:hover{
-      background: linear-gradient(var(--brandFour), var(--brandFour)) bottom/0% 2px no-repeat;
-      background-size: 100% 2px;
-      transition: background-size .3s;
+    &:hover{
+      color: var(--brandFour);
       transition-duration: .3s;
+      transition-delay: 0.1;
     }
+
   }
 
   .link-line{
@@ -107,7 +110,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media (min-width: 576px){
+  @media (min-width: 790px){
     body{
       padding: 40px;
     }

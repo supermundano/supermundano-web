@@ -2,14 +2,22 @@ import styled from "styled-components"
 
 const ServicesListItemStyle = styled.div`
   border-top: 1px solid var(--brandFour);
-  padding: 5rem 0;
+  padding: 3rem 0;
 
   &:last-child{
     padding-bottom: 0;
   }
 
   .text{
-    margin: 5rem 0;
+    margin: 2rem 0 0;
+  }
+
+  @media (min-width: 576px){
+    padding: 5rem 0;
+
+    .text{
+      margin: 5rem 0;
+    }
   }
 `;
 

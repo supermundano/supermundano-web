@@ -12,20 +12,12 @@ const HeaderStyles = styled.header`
 
       a{
         font-size: 1.8rem;
-        display: block;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-    }
 
-    li {
-      span{
-        margin: 0 1vw;
-        padding: 1rem;
-
-        a{
-          padding: 1rem 1vw;
-        }
-      }
     }
 
     .wrap{
@@ -45,6 +37,37 @@ const HeaderStyles = styled.header`
             ul{
               margin-top: 3rem;
               display: flex;
+
+              li {
+                margin-left: 3rem;
+
+                a{
+
+                  &:after{
+                    display: block;
+                    content: '';
+                    width: 0;
+                    margin-top: 1rem;
+                    height: 1px;
+                    background-size: 0 0.1rem;
+                    background: linear-gradient(var(--brandFour), var(--brandFour)) 1px no-repeat;
+                    background-position: 0 bottom;
+                    transition: all .3s linear .1s;
+                  }
+
+                  &:hover:after{
+                    background-size: 100% 0.1rem;
+                    width: 100%;
+                    transition: all .3s linear .1s;
+                  }
+
+                }
+
+              }
+
+              li:first-child{
+                margin: 0;
+              }
             }
         }
     }
@@ -54,6 +77,7 @@ const HeaderStyles = styled.header`
 
         a{
           font-size: 2rem;
+          align-items: flex-start;
         }
 
       }
@@ -67,11 +91,25 @@ const HeaderStyles = styled.header`
 
         &__menu{
             flex-direction: row;
+            align-items: flex-start;
 
             ul{
               margin-top: 0;
             }
         }
+      }
+    }
+
+    @media (min-width: 975px){
+      h1{
+
+        a{
+          flex-direction: row;
+          .title-secondary{
+            margin-left: 1rem;
+          }
+        }
+
       }
     }
 `;
