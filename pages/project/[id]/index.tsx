@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { getSanityContent } from '../../../lib/sanity'
 import { allProjectsQuery, singleProjectQuery } from '../../../lib/queries'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -10,17 +9,34 @@ import ProjectEditorInfo from '../../../components/projectEditorInfo'
 
 const GlobalStyleProject = createGlobalStyle`
   body{
-    background: #F4F4F4 !important;
-    color: black !important;
+    background: var(--bgSecondary) !important;
+    color: var(--bgPrimary) !important;
   }
 
   a{
-    color: black !important;
+    color: var(--bgPrimary) !important;
+
+    &:hover{
+      color: var(--brandTertiary) !important;
+    }
+
+    &:after{
+      background: var(--brandTertiary) !important;
+    }
+  }
+
+  .footer-info-wrap div, h1{
+    a{
+      &:hover{
+        color: currentColor !important;
+      }
+    }
   }
 
   .secondary-title, .wrap__menu li a, .title-secondary{
     color: var(--brandTertiary) !important;
   }
+
 
 
 `;

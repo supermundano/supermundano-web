@@ -38,6 +38,15 @@ const ProjectFeaturedInfoStyle = styled.div`
       grid-template-columns: auto auto;
       column-gap: 1rem;
 
+    }
+  }
+
+  @media (min-width: 576px){
+    .project-info{
+      margin-top: 4rem;
+    }
+
+    .project-info-columns{
       & > div{
 
         h2{
@@ -45,13 +54,6 @@ const ProjectFeaturedInfoStyle = styled.div`
         }
 
       }
-    }
-  }
-
-  @media (min-width: 576px){
-    .project-info{
-
-      margin-top: 4rem;
     }
   }
 
@@ -71,6 +73,16 @@ const ProjectFeaturedInfoStyle = styled.div`
         margin-top: 4rem;
       }
 
+    }
+
+    .project-info-columns{
+      & > div{
+
+        h2{
+          margin-top: 4rem;
+        }
+
+      }
     }
 
     .project-services{
