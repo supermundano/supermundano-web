@@ -15,6 +15,10 @@ const ServicesListSectionStyle = styled.div`
   @media (min-width: 576px){
     display: grid;
     grid-template-columns: 25% 75%;
+
+    .text:last-child{
+      margin-top: 0;
+    }
   }
 `;
 
@@ -43,6 +47,22 @@ export default function ServicesListSection() {
                 <p>Front-end development</p>
                 <p>Back-end development</p>
             </ServicesListItem>
+        </div>
+        <div className="title">
+          <h2 className="secondary-title">CLIENTES</h2>
+        </div>
+        <div className="wrap">
+          <ServicesListItem title="">
+            <p>Cliente</p>
+            <p>Lorem Ipsum Dolor</p>
+            <p>Dolor Sit Amet</p>
+            <p>Lorem Ipsum Dolor</p>
+            <p>Dolor Sit Amet</p>
+            <p>Lorem Ipsum Dolor</p>
+            <p>Dolor Sit Amet</p>
+            <p>Lorem Ipsum Dolor</p>
+            <p>Dolor Sit Amet</p>
+          </ServicesListItem>
         </div>
     </ServicesListSectionStyle>
   )

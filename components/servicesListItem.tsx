@@ -4,10 +4,6 @@ const ServicesListItemStyle = styled.div`
   border-top: 1px solid var(--brandFour);
   padding: 3rem 0;
 
-  &:last-child{
-    padding-bottom: 0;
-  }
-
   .text{
     margin: 2rem 0 0;
   }
@@ -22,10 +18,12 @@ const ServicesListItemStyle = styled.div`
 `;
 
 export default function ServicesListItem( {title, children}:any ) {
+  if(title){
+    title = <h2 className="secondary-title">{ title }</h2>;
+  }
   return  (
     <ServicesListItemStyle>
-      <h2 className="secondary-title">{ title }</h2>
-
+       { title }
       <div className="text">
           { children }
       </div>
