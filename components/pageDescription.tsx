@@ -13,6 +13,7 @@ const PageDescriptionStyles = styled.div`
 
     @media (min-width: 576px){
       justify-content: flex-start;
+
       p{
         text-align: left;
         max-width: 41rem;
@@ -20,7 +21,6 @@ const PageDescriptionStyles = styled.div`
     }
 `;
 
-// TODO: Si el componente no lo vamos a reutilizar, entonces no es un componente
 export default function PageDescription() {
     return(
         <PageDescriptionStyles>
