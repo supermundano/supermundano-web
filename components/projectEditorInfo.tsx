@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from 'next/image'
-import TwoImages from './projectTwoImages'
+import TwoImages from './ProjectTwoImages'
 import SanityImage from "./SanityImage";
 
 const ProjectEditorInfoStyle = styled.div`

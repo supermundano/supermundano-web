@@ -1,9 +1,9 @@
-import Page from '../components/page'
+import Page from '../components/Page'
 import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
 import { GetStaticProps } from 'next'
-import PageDescription from '../components/pageDescription'
-import ProjectsContainer from '../components/projectsContainer'
+import PageDescription from '../components/PageDescription'
+import ProjectsContainer from '../components/ProjectsContainer'
 
 
 export default function Home( {data}:any ) {

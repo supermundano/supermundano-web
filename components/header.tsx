@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import MenuLink from '../models/links';
-import Menu from './menu'
+import Menu from './Menu'
 import ClaimLogo from './ClaimLogo'
 
 const HeaderStyles = styled.header`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Project from '../models/project'
-import ProjectCard from './projectCard'
+import ProjectCard from './ProjectCard'
 
 const ProjectsContainerStyles = styled.section`
 display: grid;

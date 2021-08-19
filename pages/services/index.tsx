@@ -1,13 +1,11 @@
-import Page from '../../components/page'
-import ServicesTextSection from '../../components/servicesTextSection'
-import ServicesListSection from '../../components/servicesListSection'
+import Page from '../../components/Page'
+import ServicesTextSection from '../../components/ServicesTextSection'
+import ServicesListSection from '../../components/ServicesListSection'
 import { getSanityContent } from '../../lib/sanity';
 import { featuredProjectsQuery } from '../../lib/queries';
 
 
-export default function Servicios( {data}:any ) {
-  const  {featured_projects}  = data;
-
+export default function Servicios( ) {
   return (
     <div className="services">
       <Page>
@@ -16,25 +14,4 @@ export default function Servicios( {data}:any ) {
       </Page>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  // const { data } = await getSanityContent({
-  const { allHomepage } = await getSanityContent({
-    query: `
-      ${featuredProjectsQuery}
-    `,
-  });
-  
-  const data = allHomepage[0];
-
-  
-  
-
-  return {
-    props: {
-      data,
-    },
-    revalidate: 1,
-  };
 }

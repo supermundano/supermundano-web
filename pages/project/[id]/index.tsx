@@ -2,9 +2,9 @@ import { getSanityContent } from '../../../lib/sanity'
 import { allProjectsQuery, singleProjectQuery } from '../../../lib/queries'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { createGlobalStyle } from 'styled-components'
-import Page from '../../../components/page'
-import ProjectFeaturedInfo from '../../../components/projectFeaturedInfo'
-import ProjectEditorInfo from '../../../components/projectEditorInfo'
+import Page from '../../../components/Page'
+import ProjectFeaturedInfo from '../../../components/ProjectFeaturedInfo'
+import ProjectEditorInfo from '../../../components/ProjectEditorInfo'
 
 
 const GlobalStyleProject = createGlobalStyle`

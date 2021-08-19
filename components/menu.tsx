@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import MenuLink from '../models/links'
-import MenuItem from './menuItem';
+import MenuItem from './MenuItem';
 
 const MenuStyles = styled.ul`
   list-style: none;

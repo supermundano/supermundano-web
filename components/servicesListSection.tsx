@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import ServicesListItem from "./servicesListItem"
+import ServicesListItem from "./ServicesListItem"
 
 const ServicesListSectionStyle = styled.div`
   margin-bottom: 5rem;
