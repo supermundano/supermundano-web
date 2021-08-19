@@ -196,9 +196,9 @@ const FooterTag = styled.footer`
 export default function Footer() {
 
   const menu = [
-    {'title': 'Behance', 'url':'#'},
-    {'title': 'Instagram', 'url':'#'},
-    {'title': 'LinkedIn', 'url':'#'},
+    {'title': 'Behance', 'url':'https://www.behance.net/supermundano'},
+    {'title': 'Instagram', 'url':'https://instagram.com/supermundanoestudio'},
+    {'title': 'LinkedIn', 'url':'https://es.linkedin.com/company/estudio-supermundano'},
     {'title': 'Twitter', 'url':'https://twitter.com/supermundano'},
   ]
 
