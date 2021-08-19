@@ -27,3 +27,7 @@ https://www.sanity.io/plugins/next-sanity-image     (Utility for using responsiv
 
 # Con 'onExitComplete' podemos ejecutar código antes de crear una nueva instancia de vista durante la animación
 <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+
+
+# Add Google Analytics code and Custom track functions
+https://mariestarck.com/add-google-analytics-to-your-next-js-application-in-5-easy-steps/
