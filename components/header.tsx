@@ -117,10 +117,9 @@ const HeaderStyles = styled.header`
 // TODO: H1 en home pero debería cambiar y que otro elemento fuera el H1 en páginas internas
 export default function Header() {
 
-    var array:MenuLink[];
+    let array:MenuLink[];
 
     array = [
-        new MenuLink('Home','/'),
         new MenuLink('Work','/'),
         new MenuLink('Services','/services')
     ];
@@ -137,14 +136,12 @@ export default function Header() {
     )
 }
 
+// export async function getStaticProps() {
+//     var array:MenuLink[];
+//     array = [
+//         new MenuLink('Work','work'),
+//         new MenuLink('Services','services')
+//     ];
 
-
-export async function getStaticProps() {
-    var array:MenuLink[];
-    array = [
-        new MenuLink('Work','work'),
-        new MenuLink('Services','services')
-    ];
-
-    return array;
-  }
+//     return array;
+//   }
