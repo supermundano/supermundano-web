@@ -2,8 +2,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
 
-// TODO: No estamos haciendo un Reset Global.
+
 const GlobalStyle = createGlobalStyle`
+
+  /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
   @font-face {
     font-family: 'Helvetica Neue Local';
@@ -44,12 +46,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%; /* sets the base font to 10px for easier math. 1.6rem = 16px */
   }
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
   body{
-    background: black;
+    background: var(--bgPrimary);
     font-family: 'Helvetica Neue Local', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 30px 20px;
     color: var(--brandPrimary);
@@ -85,7 +83,14 @@ const GlobalStyle = createGlobalStyle`
       transition-duration: .3s;
       transition-delay: 0.1;
     }
+  }
 
+  p{
+    margin-bottom: 2.5rem;
+  }
+
+  p:last-child{
+    margin-bottom: 0
   }
 
   .link-line{

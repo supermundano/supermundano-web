@@ -5,6 +5,7 @@ const PageDescriptionStyles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
     margin-bottom: 8rem;
 
     p{

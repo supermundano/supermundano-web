@@ -53,15 +53,23 @@ export default function ServicesListSection() {
         </div>
         <div className="wrap">
           <ServicesListItem title="">
-            <p>Cliente</p>
-            <p>Lorem Ipsum Dolor</p>
-            <p>Dolor Sit Amet</p>
-            <p>Lorem Ipsum Dolor</p>
-            <p>Dolor Sit Amet</p>
-            <p>Lorem Ipsum Dolor</p>
-            <p>Dolor Sit Amet</p>
-            <p>Lorem Ipsum Dolor</p>
-            <p>Dolor Sit Amet</p>
+
+            <p>Instituto BME (Bolsas y Mercados Españoles)</p>
+            <p>Hello Creatividad</p>
+            <p>Club de Malasmadres</p>
+            <p>Grupo Saona</p>
+            <p>Clínica Ginecológica Bau</p>
+            <p>Dg Arquitectos</p>
+            <p>Zalamero</p>
+            <p>Bowi Croqueta</p>
+            <p>Bettter by Letter</p>
+            <p>Calma Chechu</p>
+            <p>Fabián León Masterchef</p>
+            <p>The Sunglasses Box</p>
+            <p>R de Room</p>
+            <p>Lada Interiorismo</p>
+            <p>Dr. Anido.</p>
+
           </ServicesListItem>
         </div>
     </ServicesListSectionStyle>

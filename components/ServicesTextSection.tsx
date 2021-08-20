@@ -3,9 +3,11 @@ import styled from "styled-components"
 const ServicesTextSectionStyle = styled.div`
   margin-bottom: 5rem;
 
-  .title h2,
-  .text p{
-    margin-top:  0;
+  .text{
+    max-width: 65rem;
+    p:not(:last-child){
+      margin-bottom: 2.5rem;
+    }
   }
 
   @media (min-width: 576px){
