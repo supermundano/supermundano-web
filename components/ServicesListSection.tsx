@@ -29,31 +29,31 @@ export default function ServicesListSection() {
           <h2 className="secondary-title">SERVICES</h2>
         </div>
         <div className="wrap">
-            <ServicesListItem title="ESTRATEGIA DE MARCA">
+            <ServicesListItem title="BRAND STRATEGY">
                 <p>Research</p>
                 <p>Brand Strategy</p>
                 <p>Naming</p>
+                <p>Claiming</p>
             </ServicesListItem>
-            <ServicesListItem title="CREATIVIDAD">
+            <ServicesListItem title="CREATIVITY">
                 <p>Narrativa de marca visual y verbal</p>
-                <p>Diseño y Dirección de Arte</p>
+                <p>Design &amp; Art direction</p>
                 <p>UI / UX</p>
                 <p>Wireframe &amp; Prototyping</p>
-                <p>Website y Ecommerce</p>
+                <p>Website &amp; Ecommerce</p>
                 <p>Print &amp; Packaging</p>
             </ServicesListItem>
-            <ServicesListItem title="TECNOLOGÍA">
+            <ServicesListItem title="TECHNOLOGY">
                 <p>Creative development</p>
                 <p>Front-end development</p>
                 <p>Back-end development</p>
             </ServicesListItem>
         </div>
         <div className="title">
-          <h2 className="secondary-title">CLIENTES</h2>
+          <h2 className="secondary-title">CLIENTS</h2>
         </div>
         <div className="wrap">
           <ServicesListItem title="">
-
             <p>Instituto BME (Bolsas y Mercados Españoles)</p>
             <p>Hello Creatividad</p>
             <p>Club de Malasmadres</p>
