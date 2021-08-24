@@ -1,10 +1,12 @@
 import styled from "styled-components"
 
-const ServicesTextSectionStyle = styled.div`
+export const ServicesTextSectionStyle = styled.div`
   margin-bottom: 5rem;
 
   .text{
     max-width: 65rem;
+
+    > ul,
     p:not(:last-child){
       margin-bottom: 2.5rem;
     }

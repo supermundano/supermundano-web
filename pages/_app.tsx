@@ -61,6 +61,41 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 12vh;
   }
 
+  .btn{
+    color: var(--brandPrimary);
+    background-color: var(--bgPrimary);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+
+    &:hover{
+      color:var(--brandSecondary);
+      background-color: var(--bgSecondary);
+    }
+
+    &--secondary{
+      color:var(--brandSecondary);
+      background-color: var(--bgSecondary);
+
+      &:hover{
+        color:var(--brandPrimary);
+        background-color: var(--bgPrimary);
+      }
+    }
+  }
+
+  .cookie-btn{
+    color: var(--brandPrimary) !important;
+    background-color: var(--bgPrimary) !important;
+    font-size: 1.6rem !important;
+    padding: 1rem 2rem !important;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      color:var(--brandSecondary) !important;
+      background-color: var(--bgSecondary) !important;
+    }
+  }
+
   .secondary-title{
     text-transform: uppercase;
     color: var(--brandFour);
