@@ -1,4 +1,6 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
+import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
 
@@ -158,6 +160,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+      TagManager.initialize({ gtmId: 'GTM-TKB783L' });
+  }, []);
 
   return (
     <>
