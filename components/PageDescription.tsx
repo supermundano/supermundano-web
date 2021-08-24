@@ -25,7 +25,7 @@ const PageDescriptionStyles = styled.div`
 export default function PageDescription() {
     return(
         <PageDescriptionStyles>
-            <p>Trabajamos la creatividad desde un punto de vista estratégico para contextualizar cada marca en su entorno.</p>
+            <p>Our work focuses on creativity from a strategic perspective to contextualise each brand in its environment.</p>
         </PageDescriptionStyles>
     )
 }

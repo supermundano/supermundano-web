@@ -30,12 +30,12 @@ export default function ServicesTextSection() {
           <h2 className="secondary-title">INSIGHTS</h2>
       </div>
       <div className="text">
-        <p>Supermundano es un estudio dedicado al diseño de marca que aúna la consultoría y la creatividad estratégica para que las buenas ideas aterricen con seguridad en el mundo real.</p>
-        <p>Transformamos proyectos en marcas que cobran vida en armonía con su contexto, cambiante y en constante evolución.</p>
-        <p>No entendemos el diseño sin estrategia, ni el éxito sin valentía. Nos gustan las ideas disruptivas y los puntos de vista alternativos.</p>
-        <p>Creemos en el trabajo colaborativo con nuestros clientes, con los que siempre defendemos una postura de honestidad aunque sea incómoda.</p>
-        <p>Sabemos de marcas y de negocio. Sabemos de diseño y creatividad. Si pensamos que las cosas se pueden hacer mejor, te lo diremos.</p>
-        <p>Encajamos con proyectos que creen en el poder de los detalles, que escuchan a sus clientes y aportan valor a su entorno.</p>
+        <p>Supermundano is a studio devoted to brand design that unites consulting and strategic creativity for good ideas to safely land in the real world.</p>
+        <p>We transform projects into brands that come to life in harmony with their changing and constantly evolving contexts.</p>
+        <p>We don&apos;t understand design without strategy or success without courage. We like disruptive ideas and alternative points of view.</p>
+        <p>We believe in working collaboratively with our clients with whom we always advocate honesty even if it entails an awkward position.</p>
+        <p>We know about brands and business. We know about creativity and design. If we think things can be done in a better way, we&apos;ll let you know.</p>
+        <p>We become one with projects that believe in the power of details, listen to their customers and add value to their environment.</p>
       </div>
     </ServicesTextSectionStyle>
   )
