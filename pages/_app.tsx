@@ -161,7 +161,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
-      TagManager.initialize({ gtmId: 'GTM-TKB783L' });
+      TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
   }, []);
 
   return (

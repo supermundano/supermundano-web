@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 import { motion } from 'framer-motion'
+import TagManager from 'react-gtm-module';
 
 import CookieConsent, { Cookies } from "react-cookie-consent";
 import Link from 'next/link'
@@ -44,6 +45,9 @@ export default function Page({ children }:any) {
         sameSite="strict"
         style={{ background: "#ffffffee", color: "#000", maxWidth: "380px", right: "0", left: "auto", padding: '2rem' }}
         expires={150}
+        onAccept={() => {
+          TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
+        }}
       >
         <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and visits. By clicking &quot;I agree&quot;, you agree to the use of ALL cookies. </p>
 
