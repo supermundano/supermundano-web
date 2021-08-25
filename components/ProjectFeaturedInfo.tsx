@@ -17,8 +17,6 @@ const ProjectFeaturedInfoStyle = styled.div`
 
   }
 
-
-
   .project-info-columns > div{
 
     h2{
