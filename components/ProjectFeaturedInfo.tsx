@@ -5,6 +5,7 @@ import { sanityClient } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image';
 
 const ProjectFeaturedInfoStyle = styled.div`
+
   display: flex;
   flex-direction: column-reverse;
 
@@ -14,11 +15,9 @@ const ProjectFeaturedInfoStyle = styled.div`
     .wrap{
       width: 100%;
     }
-
   }
 
   .project-info-columns > div{
-
     h2{
       font-weight: 300;
       margin-top: 4rem;
@@ -35,7 +34,6 @@ const ProjectFeaturedInfoStyle = styled.div`
       display: grid;
       grid-template-columns: auto auto;
       column-gap: 1rem;
-
     }
   }
 
@@ -46,11 +44,10 @@ const ProjectFeaturedInfoStyle = styled.div`
 
     .project-info-columns{
       & > div{
-
         h2{
           margin-top: 0;
+          margin-bottom: 2rem;
         }
-
       }
     }
   }
@@ -70,12 +67,10 @@ const ProjectFeaturedInfoStyle = styled.div`
       h2{
         margin-top: 4rem;
       }
-
     }
 
     .project-info-columns{
       & > div{
-
         h2{
           margin-top: 4rem;
         }
