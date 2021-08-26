@@ -26,30 +26,29 @@ const ProjectEditorInfoStyle = styled.div`
 export default function ProjectEditorInfo(content_raw:any) {
   return(
     <>
-      <ProjectEditorInfoStyle>
+      {content_raw.content_raw != null &&
+        <ProjectEditorInfoStyle>
           {Object.entries(content_raw.content_raw).map(function(bloque:any, index){
-              switch(bloque[1]._type){
-                  case 'twoImages':
-                      return(
-                      <TwoImages key={ bloque[1]?._key } image1={ bloque[1]?.images[0] } image2={ bloque[1]?.images[1]} />
-                      )
-                  break;
-                  case 'image':
-
-                      return (
-                        <SingleImage key={bloque[1]._key} image={ bloque[1] }/>
-                      )
-
-                  break;
-                  case 'block':
-                    return (
-                      <p key={ bloque[1]._key } >{ bloque[1].children[0]?.text }</p>
+            switch(bloque[1]._type){
+                case 'twoImages':
+                    return(
+                    <TwoImages key={ bloque[1]?._key } image1={ bloque[1]?.images[0] } image2={ bloque[1]?.images[1]} />
                     )
-                  break;
-              }
-
+                break;
+                case 'image':
+                    return (
+                      <SingleImage key={bloque[1]._key} image={ bloque[1] }/>
+                    )
+                break;
+                case 'block':
+                  return (
+                    <p key={ bloque[1]._key } >{ bloque[1].children[0]?.text }</p>
+                  )
+                break;
+            }
           })}
-      </ProjectEditorInfoStyle>
+        </ProjectEditorInfoStyle>
+      }
     </>
   )
 }
