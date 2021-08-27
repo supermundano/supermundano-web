@@ -92,6 +92,7 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
       sanityClient,
       listImage,
       {
+        enableBlurUp: false,
         blurUpImageWidth: 200,
         blurUpImageQuality: 40,
         blurUpAmount: 24

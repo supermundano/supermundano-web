@@ -24,6 +24,7 @@ export default function ProjectCard(project:Project) {
 		sanityClient,
 		listImage,
     {
+      enableBlurUp: false,
 			blurUpImageWidth: 200,
 			blurUpImageQuality: 40,
 			blurUpAmount: 24
