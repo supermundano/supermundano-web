@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import Image from 'next/image'
 import { getImage } from '@sanity/asset-utils'
-import { sanityClient } from '../lib/sanity'
-import { useNextSanityImage } from 'next-sanity-image';
 import { Fragment } from 'react'
+import SanityImage from '../components/SanityImage'
 
 const ProjectFeaturedInfoStyle = styled.div`
 
@@ -88,16 +86,6 @@ const ProjectFeaturedInfoStyle = styled.div`
 
 export default function ProjectFeaturedInfo( {title, services, colabs, featured_image}:any ) {
     const listImage = getImage(featured_image.asset)
-    const imageProps = useNextSanityImage(
-      sanityClient,
-      listImage,
-      {
-        blurUpImageWidth: 200,
-        blurUpImageQuality: 40,
-        blurUpAmount: 24
-      }
-    );
-    const src = (typeof imageProps?.src === 'string') ? imageProps?.src : '';
 
     return(
         <ProjectFeaturedInfoStyle>
@@ -124,7 +112,7 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
 
           <div className="project-image">
             <div className="wrap">
-              <Image alt={title} src={src} {...imageProps} layout="responsive" sizes="(max-width: 1600px) 100vw, 1600px" />
+            <SanityImage image_data={ listImage } have_source={true}/>
             </div>
           </div>
 

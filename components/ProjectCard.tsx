@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import Project from '../models/project'
 import Link from 'next/link'
-import Image from 'next/image'
 import { getImage } from '@sanity/asset-utils'
-import React from 'react'
 import SanityImage from '../components/SanityImage'
 
 const ProjectCardStyle = styled.article`
