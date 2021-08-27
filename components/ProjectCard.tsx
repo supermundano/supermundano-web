@@ -37,7 +37,7 @@ export default function ProjectCard(project:Project) {
     <ProjectCardStyle>
       <Link href={slug}>
           <a>
-            <Image alt="Supermundano" src={src} {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" />
+            <Image alt="Supermundano" src={src} {...imageProps} layout="responsive" sizes="(max-width: 1600px) 100vw, 1600px" />
           </a>
       </Link>
       <h2 className="title">

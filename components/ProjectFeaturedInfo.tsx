@@ -124,7 +124,7 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
 
           <div className="project-image">
             <div className="wrap">
-              <Image alt={title} src={src} {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" />
+              <Image alt={title} src={src} {...imageProps} layout="responsive" sizes="(max-width: 1600px) 100vw, 1600px" />
             </div>
           </div>
 
