@@ -18,6 +18,6 @@ export default function SanityImage( image_data :any) {
   const altText = image_data.image_data?.asset?.altText || 'Imagen Supermundano';
 
   return (
-      <Image alt={altText} src={src} {...imageProps} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" />
+      <Image alt={altText} src={src} {...imageProps} layout="responsive" sizes="(max-width: 1600px) 100vw, 1600px" />
   );
 }

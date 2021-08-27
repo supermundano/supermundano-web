@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import ServicesListItem from "./ServicesListItem"
 
-const ServicesListSectionStyle = styled.div`
+export const ServicesListSectionStyle = styled.div`
   margin-bottom: 5rem;
 
   .title h2{
