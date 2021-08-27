@@ -8,6 +8,7 @@ export default function SanityImage( image_data :any) {
 		sanityClient,
 		image_ref,
     {
+      enableBlurUp: false,
 			blurUpImageWidth: 200,
 			blurUpImageQuality: 40,
 			blurUpAmount: 24
