@@ -3,8 +3,8 @@ import Project from '../models/project'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getImage } from '@sanity/asset-utils'
-import { sanityClient } from '../lib/sanity'
-import { useNextSanityImage } from 'next-sanity-image';
+import React from 'react'
+import SanityImage from '../components/SanityImage'
 
 const ProjectCardStyle = styled.article`
   img{
@@ -19,17 +19,8 @@ const ProjectCardStyle = styled.article`
 `;
 
 export default function ProjectCard(project:Project) {
+
   const listImage = getImage(project.list_image)
-  const imageProps = useNextSanityImage(
-		sanityClient,
-		listImage,
-    {
-			blurUpImageWidth: 200,
-			blurUpImageQuality: 40,
-			blurUpAmount: 24
-		}
-	);
-  const src = (typeof imageProps?.src === 'string') ? imageProps?.src : '';
 
   var slug = `/project/${project.slug}`;
 
@@ -37,7 +28,7 @@ export default function ProjectCard(project:Project) {
     <ProjectCardStyle>
       <Link href={slug}>
           <a>
-            <Image alt="Supermundano" src={src} {...imageProps} layout="responsive" sizes="(max-width: 1600px) 100vw, 1600px" />
+            <SanityImage image_data={ listImage } image_size="700" have_source={true}/>
           </a>
       </Link>
       <h2 className="title">

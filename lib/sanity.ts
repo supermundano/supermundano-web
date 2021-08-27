@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import  SanityClient  from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
+import { useNextSanityImage } from 'next-sanity-image';
 
 interface SanityQuery {
   query: string;
@@ -36,3 +37,17 @@ export const sanityClient = SanityClient({
   useCdn: true, // `false` if you want to ensure fresh data
 })
 
+export function getImageProps(image:any){
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const imageProps = useNextSanityImage(
+    sanityClient,
+    image,
+    {
+      enableBlurUp: false,
+      blurUpImageWidth: 200,
+      blurUpImageQuality: 40,
+      blurUpAmount: 24
+    }
+  );
+  return imageProps;
+}
