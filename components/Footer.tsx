@@ -40,7 +40,7 @@ const FooterTag = styled.footer`
 
     & *{
       text-align: left;
-      line-height: 1.5;
+      line-height: 1.3;
     }
 
     a{
