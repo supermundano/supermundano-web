@@ -32,9 +32,7 @@ export default function Page({ children }:any) {
         <title>Supermundano</title>
         <meta name="description" content="Creative Brands in Context" />
         <link rel="icon" href="/favicon.ico" />
-        {/* TODO: Prueba de velocidad de carga de la fuente */}
-        {/* <link rel="preload" href="/static/HelveticaNeue-Light.woff2" as="font" type="font/woff2" />
-        <link rel="preload" href="/static/HelveticaNeue.woff2" as="font" type="font/woff2" /> */}
+        <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
       </Head>
       <Header/>
         <main>{children}</main>

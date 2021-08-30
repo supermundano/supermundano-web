@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* ! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
-  @font-face {
+  /* @font-face {
     font-family: 'Helvetica Neue Local';
     src: local('Helvetica Neue'), url('/static/HelveticaNeue-Light.woff2') format('woff2');
     font-weight: 400;
@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-display: swap;
     unicode-range: U+000-5FF;
-  }
+  } */
 
   html {
     --brandPrimary:   #E2E2E2;
@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     background: var(--bgPrimary);
-    font-family: 'Helvetica Neue Local', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'neue-haas-grotesk-display', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 30px 20px;
     color: var(--brandPrimary);
     font-size: var(--text-size);
