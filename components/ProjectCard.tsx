@@ -14,6 +14,10 @@ const ProjectCardStyle = styled.article`
     font-size: var(--text-size);
     margin: 1.5rem 0;
   }
+
+  .description{
+    max-width: 80%;
+  }
 `;
 
 export default function ProjectCard(project:Project) {
