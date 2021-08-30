@@ -9,11 +9,11 @@ grid-template-columns: 100%;
 row-gap: 5rem;
 
 @media (min-width: 576px){
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 @media (min-width: 990px){
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 `;
 
