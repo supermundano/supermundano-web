@@ -38,7 +38,7 @@ export default function Servicios( ) {
             <p><strong>More Information</strong></p>
 
             <p>Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren&apos;t sure whether you need or not it&apos;s usually safer to leave cookies enabled in case it does interact with one of the features you use on our site.</p>
-            <p>However if you are still looking for more information then you can contact us by email here: <a href="mailto:hola@supermundano.com" target="_blank" rel="nofollow noopener noreferrer">hola@supermundano.com</a></p>
+            <p>However if you are still looking for more information then you can contact us by email here: <a href="mailto:hola@blavetstudio.com" target="_blank" rel="nofollow noopener noreferrer">hola@blavetstudio.com</a></p>
 
           </div>
         </ServicesTextSectionStyle>
