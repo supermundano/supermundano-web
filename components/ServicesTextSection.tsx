@@ -30,7 +30,7 @@ export default function ServicesTextSection() {
           <h2 className="secondary-title">INSIGHTS</h2>
       </div>
       <div className="text">
-        <p>Supermundano is a studio devoted to brand design that unites consulting and strategic creativity for good ideas to safely land in the real world.</p>
+        <p>Blavet is a studio devoted to brand design that unites consulting and strategic creativity for good ideas to safely land in the real world.</p>
         <p>We transform projects into brands that come to life in harmony with their changing and constantly evolving contexts.</p>
         <p>We don&apos;t understand design without strategy or success without courage. We like disruptive ideas and alternative points of view.</p>
         <p>We believe in working collaboratively with our clients with whom we always advocate honesty even if it entails an awkward position.</p>

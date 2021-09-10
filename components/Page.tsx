@@ -29,7 +29,7 @@ export default function Page({ children }:any) {
         transition={{ type: 'linear' }}
       >
       <Head>
-        <title>Supermundano</title>
+        <title>Blavet</title>
         <meta name="description" content="Creative Brands in Context" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
@@ -42,7 +42,7 @@ export default function Page({ children }:any) {
         location="bottom"
         buttonText="I agree"
         buttonClasses="cookie-btn"
-        cookieName="accept-supermundano-cookies"
+        cookieName="accept-blavet-cookies"
         sameSite="strict"
         style={{ background: "#ffffffee", color: "#000", maxWidth: "380px", right: "0", left: "auto", padding: '2rem' }}
         expires={150}
