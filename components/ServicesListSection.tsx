@@ -36,7 +36,7 @@ export default function ServicesListSection() {
                 <p>Claiming</p>
             </ServicesListItem>
             <ServicesListItem title="CREATIVITY">
-                <p>Narrativa de marca visual y verbal</p>
+                <p>Visual &amp; verbal brand narrative</p>
                 <p>Design &amp; Art direction</p>
                 <p>UI / UX</p>
                 <p>Wireframe &amp; Prototyping</p>
