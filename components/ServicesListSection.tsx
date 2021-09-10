@@ -44,9 +44,10 @@ export default function ServicesListSection() {
                 <p>Print &amp; Packaging</p>
             </ServicesListItem>
             <ServicesListItem title="TECHNOLOGY">
+                <p>Technology consulting</p>
                 <p>Creative development</p>
-                <p>Front-end development</p>
-                <p>Back-end development</p>
+                <p>Frontend development</p>
+                <p>Backend development</p>
             </ServicesListItem>
         </div>
         <div className="title">
