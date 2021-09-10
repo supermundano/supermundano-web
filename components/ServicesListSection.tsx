@@ -34,10 +34,10 @@ export default function ServicesListSection() {
                 <p>Research</p>
                 <p>Brand Strategy</p>
                 <p>Naming</p>
-                <p>Claiming</p>
+                <p>Brand claims</p>
             </ServicesListItem>
             <ServicesListItem title="CREATIVITY">
-                <p>Visual &amp; verbal brand narrative</p>
+                <p>Brand narrative</p>
                 <p>Design &amp; Art direction</p>
                 <p>UI / UX</p>
                 <p>Wireframe &amp; Prototyping</p>
