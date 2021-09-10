@@ -42,7 +42,7 @@ export default function Page({ children }:any) {
         location="bottom"
         buttonText="I agree"
         buttonClasses="cookie-btn"
-        cookieName="accept-supermundano-cookies"
+        cookieName="accept-blavet-cookies"
         sameSite="strict"
         style={{ background: "#ffffffee", color: "#000", maxWidth: "380px", right: "0", left: "auto", padding: '2rem' }}
         expires={150}

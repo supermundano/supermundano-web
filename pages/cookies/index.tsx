@@ -8,7 +8,7 @@ export default function Servicios( ) {
       <Page>
         <ServicesTextSectionStyle>
           <div className="title">
-              <h2 className="secondary-title">COOKIES</h2>
+              <h2 className="secondary-title">COOKIES POLICY</h2>
           </div>
           <div className="text">
 
@@ -22,7 +22,7 @@ export default function Servicios( ) {
 
             <p><strong>Disabling Cookies</strong></p>
 
-            <p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies. This Cookies Policy was created with the help of the <a href="https://www.cookiepolicygenerator.com/cookie-policy-generator/">Cookies Policy Generator from CookiePolicyGenerator.com</a>.</p>
+            <p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.</p>
 
             <p><strong>Third Party Cookies</strong></p>
 
