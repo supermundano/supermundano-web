@@ -48,8 +48,8 @@ export default function Page({ children }:any) {
       transition={{ type: 'linear' }}
     >
     <Head>
-      <title>Blavet</title>
-      <meta name="description" content="Creative Brands in Context" />
+      <title>Blavet - Creative Brands in Context</title>
+      <meta name="description" content="We are a full-service design studio specialized in brand strategy, creativity & technology." />
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
     </Head>
@@ -70,9 +70,6 @@ export default function Page({ children }:any) {
       sameSite="strict"
       style={{ background: "#ffffffee", color: "#000", maxWidth: "380px", right: "0", left: "auto", padding: '2rem' }}
       expires={150}
-      onAccept={() => {
-        TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
-      }}
     >
       <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and visits. By clicking &quot;I agree&quot;, you agree to the use of all cookies. </p>
 
