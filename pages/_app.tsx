@@ -220,27 +220,27 @@ const GlobalStyle = createGlobalStyle`
 
 function App({ Component, pageProps, router }: AppProps) {
 
-  const [loadedPages, setLoadedPage]:any = useState([]);
-  var visited = false;
-  useEffect(()=> {
-    var visited = false;
+  // const [loadedPages, setLoadedPage]:any = useState([]);
+  // var visited = false;
+  // useEffect( () => {
+  //   var visited = false;
 
-    loadedPages.forEach((page:any ) =>{
-      if(page === Component.name){
-        visited = true;
-      }
-    });
+  //   loadedPages.forEach((page:any ) =>{
+  //     if(page === Component.name){
+  //       visited = true;
+  //     }
+  //   });
 
-    if(!visited){
-      setLoadedPage( [...loadedPages, Component.name] );
-      console.log("Página cargada por primera vez");
-      document.getElementById('charge-animation-block')?.classList.add('started');
-      document.getElementsByTagName('body')[0]?.classList.add('started');
-    }
-    if(visited){
-      console.log("Página cargada en caché");
-    }
-  });
+  //   if(!visited){
+  //     setLoadedPage( [...loadedPages, Component.name] );
+  //     console.log("Página cargada por primera vez");
+  //     document.getElementById('charge-animation-block')?.classList.add('started');
+  //     document.getElementsByTagName('body')[0]?.classList.add('started');
+  //   }
+  //   if(visited){
+  //     console.log("Página cargada en caché");
+  //   }
+  // });
 
   useEffect(() => {
       TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
