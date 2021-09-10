@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import TagManager from 'react-gtm-module';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
+import Page from '../components/Page';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -159,9 +160,88 @@ const GlobalStyle = createGlobalStyle`
       padding: 40px;
     }
   }
+
+  @keyframes fadeOutCharge{
+    0%{
+      opacity: 1;
+      z-index: 9999;
+      visibility: visible;
+    }
+    70%{
+      opacity: 1;
+      visibility: visible;
+    }
+    100%{
+      z-index: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  #charge-animation-block{
+    opacity: 0;
+    visibility: hidden;
+    animation-name: fadeOutCharge;
+    animation-duration: 1s;
+  }
+
+  body.started{
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+
+
+    #charge-animation-block{
+      color: white;
+      display: block;
+      height: 100%;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 3rem 2rem;
+      background: black;
+      z-index: 99999999;
+      overflow: hidden;
+      opacity: 1;
+      visibility: visible;
+
+      @media (min-width: 768px){
+        padding: 4rem;
+      }
+
+      .charge-animation-content{
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
 `;
 
 function App({ Component, pageProps, router }: AppProps) {
+
+  const [loadedPages, setLoadedPage]:any = useState([]);
+  var visited = false;
+  useEffect(()=> {
+    var visited = false;
+
+    loadedPages.forEach((page:any ) =>{
+      if(page === Component.name){
+        visited = true;
+      }
+    });
+
+    if(!visited){
+      setLoadedPage( [...loadedPages, Component.name] );
+      console.log("Página cargada por primera vez");
+      document.getElementById('charge-animation-block')?.classList.add('started');
+      document.getElementsByTagName('body')[0]?.classList.add('started');
+    }
+    if(visited){
+      console.log("Página cargada en caché");
+    }
+  });
+
   useEffect(() => {
       TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
   }, []);

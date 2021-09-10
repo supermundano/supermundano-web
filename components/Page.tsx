@@ -8,6 +8,25 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 import Link from 'next/link'
 
 export default function Page({ children }:any) {
+  if (typeof window !== 'undefined') {
+    var chargeAnimationBlock = document.getElementById('charge-animation-block');
+    var body = document.getElementsByTagName('body')[0];
+    var chargeNumber = document.getElementsByClassName('charge-number')[0];
+    setTimeout(() => {
+      // Remove classes that active the animation
+      chargeAnimationBlock?.classList.remove('started');
+      body?.classList.remove('started');
+    }, 1000);
+
+    // Increment percentage number
+    for (let index = 0; index < 101; index++) {
+      setTimeout(()=>{
+        chargeNumber.innerHTML = `${index}`;
+      }, 10);
+
+    }
+  }
+
   return (
     <>
     <motion.div
@@ -35,6 +54,11 @@ export default function Page({ children }:any) {
         <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
       </Head>
       <Header/>
+        <div id="charge-animation-block">
+          <div className="charge-animation-wrap">
+            <p className="charge-animation-content"><span className="charge-number">0</span>%</p>
+          </div>
+        </div>
         <main>{children}</main>
       <Footer/>
 
