@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 import MenuLink from '../models/links';
 import ClaimLogo from './ClaimLogo'
@@ -208,7 +209,7 @@ export default function Footer() {
         <div className="footer-menu-wrap">
           <div className="widget-container">
             <h4 className="secondary-title">CONTACT</h4>
-            <p>Calle Jorge Juan, 34, 1º<br/>46004 Valencia<br/><a href="mailto:hola@supermundano.com">hola@supermundano.com</a><br/><a href="tel:+34695268598">+34 695 268 598</a></p>
+            <p>Jorge Juan, 34, 1º<br/>46004 Valencia<br/><a href="mailto:hola@supermundano.com">hola@supermundano.com</a><br/><a href="tel:+34695268598">+34 695 268 598</a></p>
           </div>
           <div className="widget-container">
             <h4 className="secondary-title">SOCIAL NETWORKS</h4>
@@ -218,7 +219,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-info-wrap">
-          <p>2021® Terms</p>
+          <p>2021® <Link href="/terms"><a>Terms</a></Link></p>
           <ClaimLogo />
         </div>
       </div>
