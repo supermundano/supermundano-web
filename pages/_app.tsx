@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--brandPrimary);
     font-size: var(--text-size);
     line-height: 1.2;
-    letter-spacing: .08rem;
+    letter-spacing: .09rem;
     margin: 0;
   }
 
