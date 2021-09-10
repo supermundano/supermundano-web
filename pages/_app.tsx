@@ -183,7 +183,6 @@ const GlobalStyle = createGlobalStyle`
     visibility: hidden;
     animation-name: fadeOutCharge;
     animation-duration: 1s;
-    animation-delay: .3s;
   }
 
   body.started{

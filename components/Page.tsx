@@ -12,11 +12,11 @@ export default function Page({ children }:any) {
     var chargeAnimationBlock = document.getElementById('charge-animation-block');
     var body = document.getElementsByTagName('body')[0];
     var chargeNumber = document.getElementsByClassName('charge-number')[0];
-    // setTimeout(() => {
-    //   // Remove classes that active the animation
-    //   chargeAnimationBlock?.classList.remove('started');
-    //   body?.classList.remove('started');
-    // }, 1000);
+    setTimeout(() => {
+      // Remove classes that active the animation
+      chargeAnimationBlock?.classList.remove('started');
+      body?.classList.remove('started');
+    }, 1000);
 
     // Increment percentage number
     for (let index = 0; index < 101; index++) {
