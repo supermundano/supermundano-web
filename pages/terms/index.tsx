@@ -31,7 +31,7 @@ export default function Servicios( ) {
             <p>The User</p>
 
             <p>The access, browsing and utilisation of the Website gives the status of User and, therefore, from the moment browsing the Website begins the User accepts all the Terms established herein, as well as any subsequent modifications, without prejudice to the enforcement of the corresponding mandatory regulations and according to each case. Given the relevance of the aforementioned Terms, the User is recommended to read them every time she/he visits the Website.</p>
-            <p>The Website of SUPERMUNDANO STUDIO S.L. provides a wide range of information, services and data. The User assumes liability for the correct use of the Website. This liability will be extended to a use of the information, Contents and/or Services and data offered by SUPERMUNDANO STUDIO S.L. that is not in opposition to the provisions of these Terms, the Law, morality or public order, or that in any other way may involve damage to the rights of third parties or to the functioning of the Website itself.</p>
+            <p>The Website of SUPERMUNDANO STUDIO S.L. provides a wide range of information, services and data. The User assumes liability for the correct use of the Website. This liability shall be extended to a use of the information, Contents and/or Services and data offered by SUPERMUNDANO STUDIO S.L. that is not in opposition to the provisions of these Terms, the Law, morality or public order, or that in any other way may involve damage to the rights of third parties or to the functioning of the Website itself.</p>
             <p>Mere access to this Website does not imply any type of commercial relationship between SUPERMUNDANO STUDIO S.L. and the User.</p>
             <p>Always in compliance with the legislation in force, this Website of SUPERMUNDANO STUDIO S.L. is aimed at all individuals, regardless of their age, who may access and/or browse the pages of the Website.</p>
 
@@ -40,7 +40,7 @@ export default function Servicios( ) {
             <p><strong>Access and browsing on the Website: disclaimer of warranties and limitation of liability.</strong></p>
 
             <p>SUPERMUNDANO STUDIO S.L. does not warrant the continuity, availability or usefulness of the Website, or of the Contents or Services. SUPERMUNDANO STUDIO S.L. will make every effort to ensure the proper functioning of the Website, but makes no representation or warranty that access to the Website will be uninterrupted or error-free.</p>
-            <p>SUPERMUNDANO STUDIO S.L. will not be liable to you or warrant that the content or software that can be accessed through this Website is error-free or that it does not cause any damage to the computer system (software and hardware) of the User. Under no circumstances will SUPERMUNDANO STUDIO S.L. be liable for any loss or damage of any kind arising from accessing, browsing or using the Website, including, but not limited to, those caused to computer systems or those caused by the introduction of viruses.</p>
+            <p>SUPERMUNDANO STUDIO S.L. shall not be liable to you or warrant that the content or software that can be accessed through this Website is error-free or that it does not cause any damage to the computer system (software and hardware) of the User. Under no circumstances shall SUPERMUNDANO STUDIO S.L. be liable for any loss or damage of any kind arising from accessing, browsing or using the Website, including, but not limited to, those caused to computer systems or those caused by the introduction of viruses.</p>
             <p>SUPERMUNDANO STUDIO S.L. also accepts no liability for any damage that may be caused to the User through improper utilisation of this Website. In particular, it accepts no liability whatsoever for any telecommunications failures, interruptions, faults or defects that may occur.</p>
 
             <p><strong>Privacy and data protection policy.</strong></p>
@@ -62,6 +62,13 @@ export default function Servicios( ) {
 
             <p><strong>Industrial and intellectual property rights.</strong></p>
             <p>SUPERMUNDANO STUDIO S.L. itself or as an assignee, is the holder of all industrial and intellectual property rights of the Website, as well as of the elements contained therein (including, but not limited to, images, sound, audio, video, software or texts, trademarks or logos, colour combinations, structure and design, selection of used materials, computer programmes necessary for its functioning, access and utilisation, etc.). Thus, they are works protected as intellectual property by the Spanish legal system, being applicable to them both the regulations of Spain and those of the European Union in this field, as well as the international treaties with regard to this matter and signed by Spain.</p>
+            <p>All rights reserved. By virtue of the provisions of the Intellectual Property Law, the reproduction, distribution and public communication, including making available, of all or part of the contents of this Website for commercial purposes on any medium and by any technical means are expressly prohibited without the authorisation of SUPERMUNDANO STUDIO S.L.</p>
+            <p>In the event that the User or a third party considers that any of the Contents of the Website infringes the rights of intellectual property protection, she/he must immediately notify SUPERMUNDANO STUDIO S.L. using the contact details in section GENERAL INFORMATION of this Legal Notice and General Terms and Conditions of Use.</p>
+
+            <p><strong>Legal action, applicable law and jurisdiction.</strong></p>
+
+            <p>SUPERMUNDANO STUDIO S.L. reserves the right to take civil or criminal action it deems necessary against the improper use of the Website and its Contents, or due to the breach of these Terms.</p>
+            <p>The relationship between the User and SUPERMUNDANO STUDIO S.L. shall be governed by the regulations in force and applicable in the Spanish territory. Should any dispute arise in relation to the interpretation and/or application of these Terms, the parties shall submit their conflicts to the ordinary jurisdiction and shall be subject to the Judges and Courts that correspond in accordance with the law.</p>
 
           </div>
         </ServicesTextSectionStyle>
