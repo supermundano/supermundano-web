@@ -54,11 +54,11 @@ export default function ServicesListSection() {
         </div>
         <div className="wrap">
           <ServicesListItem title="">
-            <p>Instituto BME (Bolsas y Mercados Españoles)</p>
             <p>Hello Creatividad</p>
+            <p>Instituto BME (Bolsas y Mercados Españoles)</p>
             <p>Club de Malasmadres</p>
             <p>Grupo Saona</p>
-            <p>Clínica Ginecológica Bau</p>
+            <p>Instituto Ginecológico Bau</p>
             <p>Dg Arquitectos</p>
             <p>Zalamero</p>
             <p>Bowi Croqueta</p>
@@ -68,7 +68,7 @@ export default function ServicesListSection() {
             <p>The Sunglasses Box</p>
             <p>R de Room</p>
             <p>Lada Interiorismo</p>
-            <p>Dr. Anido.</p>
+            <p>Dr. Anido</p>
 
           </ServicesListItem>
         </div>
