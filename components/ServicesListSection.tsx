@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import ServicesListItem from "./ServicesListItem"
+import Link from 'next/link'
 
 export const ServicesListSectionStyle = styled.div`
   margin-bottom: 5rem;
@@ -58,16 +59,16 @@ export default function ServicesListSection() {
             <p>Instituto BME (Bolsas y Mercados Españoles)</p>
             <p>Club de Malasmadres</p>
             <p>Grupo Saona</p>
-            <p>Instituto Ginecológico Bau</p>
+            <p><Link href="project/better-by-letter"><a>Instituto Ginecológico Bau</a></Link></p>
             <p>Dg Arquitectos</p>
             <p>Zalamero</p>
-            <p>Bowi Croqueta</p>
-            <p>Bettter by Letter</p>
+            <p><Link href="project/bowi-croqueta"><a>Bowi Croqueta</a></Link></p>
+            <p><Link href="project/better-by-letter"><a>Bettter by Letter</a></Link></p>
             <p>Calma Chechu</p>
             <p>Fabián León Masterchef</p>
             <p>The Sunglasses Box</p>
             <p>R de Room</p>
-            <p>Lada Interiorismo</p>
+            <p><Link href="project/lada"><a>Lada Interiorismo</a></Link></p>
             <p>Dr. Anido</p>
 
           </ServicesListItem>

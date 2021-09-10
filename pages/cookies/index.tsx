@@ -30,8 +30,8 @@ export default function Servicios( ) {
 
             <ul>
               <li>
-                  <p>This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.</p>
-                  <p>For more information on Google Analytics cookies, see the official <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank" rel="nofollow noopener noreferrer">Google Analytics</a> page.</p>
+                <p>This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.</p>
+                <p>For more information on Google Analytics cookies, see the official <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank" rel="nofollow noopener noreferrer">Google Analytics</a> page.</p>
               </li>
             </ul>
 
