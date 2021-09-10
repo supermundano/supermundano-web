@@ -50,7 +50,7 @@ export default function Page({ children }:any) {
           TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
         }}
       >
-        <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and visits. By clicking &quot;I agree&quot;, you agree to the use of ALL cookies. </p>
+        <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and visits. By clicking &quot;I agree&quot;, you agree to the use of all cookies. </p>
 
         <p>You can get more info in our <Link href="/cookies"><a>cookies policy</a></Link></p>
       </CookieConsent>
