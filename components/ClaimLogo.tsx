@@ -20,6 +20,10 @@ const ClaimLogoStyles = styled.div`
       color: var(--brandFour);
     }
   }
+
+  .logo{
+    letter-spacing: .05rem;
+  }
 `;
 
 
@@ -28,7 +32,7 @@ export default function ClaimLogo() {
     return(
         <ClaimLogoStyles>
             <Link href="/">
-                <a>SUPERMUNDANO ® <span className="title-secondary">CREATIVE BRANDS IN CONTEXT</span></a>
+                <a><span className="logo">BLAVET</span> ® <span className="title-secondary">CREATIVE BRANDS IN CONTEXT</span></a>
             </Link>
         </ClaimLogoStyles>
     )
