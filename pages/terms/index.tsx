@@ -18,7 +18,7 @@ export default function Servicios( ) {
             <p>Address: Calle Salvador Sastre, No. 10, pta 20<br/>
               Postal Code 46007 (Valencia-SPAIN)<br/>
               Telephone: (+34) 695 268 598<br/>
-              E-mail: hola@supermundano.com</p>
+              E-mail: hello@blavetstudio.com</p>
 
             <p><strong>General terms and conditions of use.</strong></p>
 
