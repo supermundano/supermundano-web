@@ -20,6 +20,7 @@ const ProjectFeaturedInfoStyle = styled.div`
     h2{
       font-weight: 300;
       margin-top: 4rem;
+      margin-bottom: 2rem;
       font-size: var(--font-size) !important;
     }
 
@@ -45,7 +46,6 @@ const ProjectFeaturedInfoStyle = styled.div`
       & > div{
         h2{
           margin-top: 0;
-          margin-bottom: 2rem;
         }
       }
     }
