@@ -3,7 +3,6 @@ import TagManager from 'react-gtm-module';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
-import Page from '../components/Page';
 
 
 const GlobalStyle = createGlobalStyle`
