@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* @font-face {
     font-family: 'Helvetica Neue Local';
-    src: local('Helvetica Neue'), url('/static/HelveticaNeue-Light.woff2') format('woff2');
+    src: local('Helvetica Neue'), url('/static/fonts/HelveticaNeue-Light.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Helvetica Neue Local';
-    src: local('Helvetica Neue'), url('/static/HelveticaNeue.woff2') format('woff2');
+    src: local('Helvetica Neue'), url('/static/fonts/HelveticaNeue.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
