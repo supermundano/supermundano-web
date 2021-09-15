@@ -30,7 +30,6 @@ const FooterTag = styled.footer`
         .title-secondary{
           text-align: left;
         }
-
       }
     }
   }
@@ -101,6 +100,10 @@ const FooterTag = styled.footer`
         a{
           display: block;
           flex-direction: row;
+
+          .title-secondary{
+            margin-left: 1rem;
+          }
         }
       }
     }
@@ -142,14 +145,6 @@ const FooterTag = styled.footer`
           flex-direction: column;
           align-items: flex-end;
         }
-      }
-
-      h1{
-
-        .title-secondary{
-
-        }
-
       }
     }
   }

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Link from 'next/link'
 
+import BlavetLogo from '../public/static/svg/blavet-logo.svg'
+
 const ClaimLogoStyles = styled.div`
   letter-spacing: 0;
 
@@ -20,20 +22,17 @@ const ClaimLogoStyles = styled.div`
       color: var(--brandFour);
     }
   }
-
-  .logo{
-    letter-spacing: .05rem;
-  }
 `;
 
 
 export default function ClaimLogo() {
-
-    return(
-        <ClaimLogoStyles>
-            <Link href="/">
-                <a><span className="logo">BLAVET ®</span> <span className="title-secondary">CREATIVE BRANDS IN CONTEXT</span></a>
-            </Link>
-        </ClaimLogoStyles>
-    )
+  return(
+      <ClaimLogoStyles>
+          <Link href="/">
+              <a><span className="logo">
+                <BlavetLogo /></span> <span className="title-secondary">CREATIVE BRANDS IN CONTEXT</span>
+              </a>
+          </Link>
+      </ClaimLogoStyles>
+  )
 }
