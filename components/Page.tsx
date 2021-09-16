@@ -2,11 +2,9 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 import { motion } from 'framer-motion'
-import TagManager from 'react-gtm-module';
 
 import CookieConsent, { Cookies } from "react-cookie-consent";
 import Link from 'next/link'
-import { useEffect } from 'react';
 
 export default function Page({ children }:any) {
 
@@ -33,6 +31,13 @@ export default function Page({ children }:any) {
       <title>Blavet - Creative Brands in Context</title>
       <meta name="description" content="We are a full-service design studio specialized in brand strategy, creativity & technology." />
       <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+      <meta name="msapplication-TileColor" content="#232323" />
+      <meta name="theme-color" content="#000000" />
       <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
     </Head>
     <Header/>
