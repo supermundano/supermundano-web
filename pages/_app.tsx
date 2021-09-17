@@ -156,6 +156,16 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  body.hidden-overflow{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    header, main, footer{
+      opacity: 0;
+    }
+  }
+
   #countdown{
     opacity: 1;
     visibility: visible;
@@ -170,10 +180,17 @@ const GlobalStyle = createGlobalStyle`
     color: white;
     padding: 3rem 2rem;
     font-size: 2rem;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 
     @media (min-width: 768px){
       padding: 4rem;
     }
+  }
+
+  #countdown.invisible{
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
   }
 
   @media (min-width: 790px){
@@ -215,26 +232,30 @@ function App({ Component, pageProps, router }: AppProps) {
     });
 
     let body = document.getElementsByTagName('body')[0];
-    if(body.classList.contains('project-page')){
-      body.classList.remove("project-page");
-    }
-
-    if(Component.name === "Project"){
-      if(!body.classList.contains('project-page')){
-        body.classList.add("project-page");
-      }
-    }
 
     if(!visited){
       setLoadedPage( [...loadedPages, Component.name] );
+      body.classList.add('hidden-overflow');
+      setInvisibleClass(body);
       // console.log("Página cargada por primera vez");
     }
     if(visited){
       // console.log("Página cargada en caché");
+      // document.getElementById("countdown")?.classList.remove("invisible");
     }
   },[Component.name,visited,loadedPages]);
 
+function setInvisibleClass(body:any){
+  setTimeout(()=>{
+    // let countdown = document.getElementById("countdown");
+    body.classList.remove('hidden-overflow');
+    // console.log(countdown);
 
+    // if(countdown){
+    //   countdown.classList.add("invisible");
+    // }
+  },1000);
+}
   useEffect(() => {
       TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
   }, []);
@@ -243,7 +264,7 @@ function App({ Component, pageProps, router }: AppProps) {
     <>
       <GlobalStyle />
       {visited && <Countdown/>}
-      <AnimatePresence exitBeforeEnter initial={false} >
+      <AnimatePresence exitBeforeEnter>
         <Component key={router.asPath} {...pageProps}></Component>
       </AnimatePresence>
     </>

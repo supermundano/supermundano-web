@@ -31,7 +31,7 @@ export const Countdown = (launch:any) => {
                     }}
                     transition={{
                         ease: "linear",
-                        duration: 0.01,
+                        duration: 0.00001,
                     }}
                 >
                     {number}%
