@@ -9,45 +9,35 @@ import Link from 'next/link'
 export default function Page({ children }:any) {
 
   return (
-  <motion.div
-      initial={{
-        opacity: 0
-      }}
-      animate={{
-        opacity: 1,
-        transition: {
-          duration: .3
-        }
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.3
-        }
-      }}
-      transition={{ type: 'linear' }}
-    >
-    <Head>
-      <title>Blavet - Creative Brands in Context</title>
-      <meta name="description" content="We are a full-service design studio specialized in brand strategy, creativity & technology." />
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-      <meta name="msapplication-TileColor" content="#232323" />
-      <meta name="theme-color" content="#000000" />
-      <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
-    </Head>
-    <Header/>
-      <div id="charge-animation-block">
-        <div className="charge-animation-wrap">
-          <p className="charge-animation-content"><span className="charge-number">0</span>%</p>
-        </div>
-      </div>
-      <main>{children}</main>
-    <Footer/>
+    <>
+    <motion.div
+        initial={{
+          opacity: 0
+        }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: .3
+          }
+        }}
+        exit={{
+          opacity: 0,
+          transition: {
+            duration: 0.3
+          }
+        }}
+        transition={{ type: 'linear' }}
+      >
+      <Head>
+        <title>Blavet</title>
+        <meta name="description" content="Creative Brands in Context" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
+      </Head>
+      <Header/>
+        <main>{children}</main>
+      <Footer/>
+
 
     <CookieConsent
       location="bottom"
@@ -64,5 +54,6 @@ export default function Page({ children }:any) {
     </CookieConsent>
 
     </motion.div>
+    </>
   )
 }

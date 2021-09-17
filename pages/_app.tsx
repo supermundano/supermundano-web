@@ -3,6 +3,7 @@ import TagManager from 'react-gtm-module';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
+import { Countdown } from '../components/Countdown';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -154,94 +155,69 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  #countdown{
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    background: black;
+    color: white;
+    padding: 3rem 2rem;
+    font-size: 2rem;
+
+    @media (min-width: 768px){
+      padding: 4rem;
+    }
+  }
+
   @media (min-width: 790px){
     body{
       padding: 40px;
     }
   }
 
-  #charge-animation-block{
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-  }
-
-  body.started{
-    overflow: hidden;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-  #charge-animation-block.started{
-    color: white;
-    display: block;
-    height: 100%;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 3rem 2rem;
-    background: black;
-    z-index: 99999999;
-    overflow: hidden;
-    opacity: 1;
-    visibility: visible;
-
-    @media (min-width: 768px){
-      padding: 4rem;
-    }
-
-    .charge-animation-content{
-      font-size: 2rem;
-      font-weight: 600;
-    }
-  }
 `;
+
 
 function App({ Component, pageProps, router }: AppProps) {
 
   const [loadedPages, setLoadedPage]:any = useState([]);
-  useEffect( () => {
-    var visited = false;
+  const [visited, setVisited]:any = useState(false);
+  useEffect(()=> {
+    setVisited(false);
 
     loadedPages.forEach((page:any ) =>{
       if(page === Component.name){
-        visited = true;
+        setVisited(true);
       }
     });
 
-    var chargeAnimationBlock = document.getElementById('charge-animation-block');
-    var body = document.getElementsByTagName('body')[0];
-    var chargeNumber = document.getElementsByClassName('charge-number')[0];
+    let body = document.getElementsByTagName('body')[0];
+    if(body.classList.contains('project-page')){
+      body.classList.remove("project-page");
+    }
+
+    if(Component.name === "Project"){
+      if(!body.classList.contains('project-page')){
+        body.classList.add("project-page");
+      }
+    }
 
     if(!visited){
       setLoadedPage( [...loadedPages, Component.name] );
-      console.log("Página cargada por primera vez");
-      chargeAnimationBlock?.classList.add('started');
-      body?.classList.add('started');
-
+      // console.log("Página cargada por primera vez");
     }
 
     if(visited){
-      console.log("Página cargada en caché");
+      // console.log("Página cargada en caché");
     }
+  },[Component.name,visited,loadedPages]);
 
-    // Increment percentage number
-    for (let index = 0; index < 101; index++) {
-      setTimeout(()=>{
-        chargeNumber = document.getElementsByClassName('charge-number')[0];
-        chargeNumber.innerHTML = `${index}`;
-      }, 10);
-    }
-
-    setTimeout( () => {
-      // Remove classes that active the animation
-      chargeAnimationBlock?.classList.remove('started');
-      body?.classList.remove('started');
-      chargeAnimationBlock?.classList.add('invisible');
-    }, 1000);
-
-
-  });
 
   useEffect(() => {
       TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
@@ -250,8 +226,9 @@ function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      {visited && <Countdown/>}
       <AnimatePresence exitBeforeEnter initial={false} >
-        <Component key={router.route} {...pageProps} />
+        <Component key={router.asPath} {...pageProps}></Component>
       </AnimatePresence>
     </>
   )
