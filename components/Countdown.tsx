@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export const Countdown = (launch:any) => {
+export const Countdown = () => {
     const [number, setNumber] = useState(0);
 
     useEffect(
     ()=>{
-        for (let index = 0; index < 101; index++) {
-            setTimeout(()=> {
-                    setNumber(index);
-            }, 10);
-        }
+      for (let index = 0; index < 101; index++) {
+          setTimeout(()=> {
+                  setNumber(index);
+          }, 10);
+      }
     }
     ,[]);
 

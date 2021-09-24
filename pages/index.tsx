@@ -4,10 +4,9 @@ import { featuredProjectsQuery } from '../lib/queries';
 import { GetStaticProps } from 'next'
 import PageDescription from '../components/PageDescription'
 import ProjectsContainer from '../components/ProjectsContainer'
-import { useRouter } from 'next/dist/client/router';
 
 
-export default function Home( {data}:any, {pageProps}:any ) {
+export default function Home( {data}:any ) {
 
   const  {featured_projects}  = data;
 

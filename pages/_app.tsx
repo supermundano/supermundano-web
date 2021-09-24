@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import TagManager from 'react-gtm-module';
-import { AnimatePresence, motion } from 'framer-motion';
+// import TagManager from 'react-gtm-module';
+import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
 import { Countdown } from '../components/Countdown';
@@ -220,29 +220,17 @@ function App({ Component, pageProps, router }: AppProps) {
       setLoadedPage( [...loadedPages, Component.name] );
       body.classList.add('hidden-overflow');
       setInvisibleClass(body);
-      // console.log("Página cargada por primera vez");
-    }
-
-    if(visited){
-      // console.log("Página cargada en caché");
-      // document.getElementById("countdown")?.classList.remove("invisible");
     }
   },[Component.name,visited,loadedPages]);
 
 function setInvisibleClass(body:any){
   setTimeout(()=>{
-    // let countdown = document.getElementById("countdown");
     body.classList.remove('hidden-overflow');
-    // console.log(countdown);
-
-    // if(countdown){
-    //   countdown.classList.add("invisible");
-    // }
   },1000);
 }
-  useEffect(() => {
-      TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
-  }, []);
+  // useEffect(() => {
+  //     TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
+  // }, []);
 
   return (
     <>
