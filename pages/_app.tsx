@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import TagManager from 'react-gtm-module';
+// import TagManager from 'react-gtm-module';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
