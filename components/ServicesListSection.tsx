@@ -60,6 +60,8 @@ export default function ServicesListSection() {
             <p>Instituto BME (Bolsas y Mercados Españoles)</p>
             <p>Club de Malasmadres</p>
             <p>Grupo Saona</p>
+            <p>El Corte Inglés</p>
+            <p>Teoxane</p>
             <p><Link href="/project/instituto-ginecologico-bau"><a>Instituto Ginecológico Bau</a></Link></p>
             <p>Dg Arquitectos</p>
             <p><Link href="/project/zalamero"><a>Zalamero</a></Link></p>

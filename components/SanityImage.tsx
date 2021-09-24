@@ -1,17 +1,17 @@
 import Image from 'next/image'
 import { getImageProps } from '../lib/sanity'
 
-export default function SanityImage( {image_data, image_size, have_source, loading} :any) {
+export default function SanityImage( {image_data, image_size, have_source} :any) {
 
   if(!image_size){
     image_size = "1600";
   }
 
-  if(loading){
-    loading = "eager";
-  }else{
-    loading = "lazy";
-  }
+  // if(loading){
+  //   loading = "eager";
+  // }else{
+  //   loading = "lazy";
+  // }
 
   var image_ref;
 
@@ -27,6 +27,6 @@ export default function SanityImage( {image_data, image_size, have_source, loadi
   const altText = image_data?.asset?.altText || 'Imagen Blavet';
 
   return (
-      <Image alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } loading={loading}/>
+      <Image alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } />
   );
 }
