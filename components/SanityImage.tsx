@@ -6,20 +6,15 @@ import { useEffect, useRef } from 'react';
 
 export default function SanityImage( {image_data, image_size, have_source, not_animated} :any) {
   gsap.registerPlugin(ScrollTrigger);
+  var classes = '';
+
   if(!image_size){
     image_size = "1600";
   }
 
   if(!not_animated){
-    var classes = "slide-up";
+    classes = "slide-up";
   }
-
-  // let image = useRef(null)
-  // const anim = gsap.fromTo(
-  //   image,
-  //   {autoAlpha: 0, x: 75, opacity: 0, transformOrigin: '0 0'},
-  //   {duration: 0.5, delay: 0.1, autoAlpha: 1, x: 0, opacity: 1});
-
 
   useEffect(() => {
 
