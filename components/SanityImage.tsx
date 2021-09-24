@@ -1,17 +1,40 @@
-import Image from 'next/image'
-import { getImageProps } from '../lib/sanity'
+import Image from 'next/image';
+import { getImageProps } from '../lib/sanity';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect, useRef } from 'react';
 
 export default function SanityImage( {image_data, image_size, have_source} :any) {
-
+  gsap.registerPlugin(ScrollTrigger);
   if(!image_size){
     image_size = "1600";
   }
 
-  // if(loading){
-  //   loading = "eager";
-  // }else{
-  //   loading = "lazy";
-  // }
+  // let image = useRef(null)
+  // const anim = gsap.fromTo(
+  //   image,
+  //   {autoAlpha: 0, x: 75, opacity: 0, transformOrigin: '0 0'},
+  //   {duration: 0.5, delay: 0.1, autoAlpha: 1, x: 0, opacity: 1});
+
+
+  useEffect(() => {
+
+    const slideLeftItems = gsap.utils.toArray(':not(.home) .slide-left');
+    slideLeftItems.forEach((item:any) => {
+      var tl = gsap.timeline();
+      tl.to(item, { y: 100, autoAlpha: 0, opacity: 0, transformOrigin: '0 0', duration: 0 });
+      tl.to(item, { y: 60, autoAlpha: 1, opacity: 1, transformOrigin: '0 0', duration: 0.4 });
+      tl.to(item, { y: 0, autoAlpha: 1, opacity: 1, transformOrigin: '0 0', duration: 0.6 });
+
+      ScrollTrigger.create({
+        trigger: item,
+        animation: tl,
+        invalidateOnRefresh: true,
+        toggleActions: 'play none none none',
+        once: true,
+      });
+    });
+  }, [])
 
   var image_ref;
 
@@ -27,6 +50,6 @@ export default function SanityImage( {image_data, image_size, have_source} :any)
   const altText = image_data?.asset?.altText || 'Imagen Blavet';
 
   return (
-      <Image alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } />
+      <Image className="slide-left" alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } />
   );
 }
