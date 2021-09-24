@@ -4,10 +4,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 
-export default function SanityImage( {image_data, image_size, have_source} :any) {
+export default function SanityImage( {image_data, image_size, have_source, not_animated} :any) {
   gsap.registerPlugin(ScrollTrigger);
   if(!image_size){
     image_size = "1600";
+  }
+
+  if(!not_animated){
+    var classes = "slide-up";
   }
 
   // let image = useRef(null)
@@ -19,7 +23,7 @@ export default function SanityImage( {image_data, image_size, have_source} :any)
 
   useEffect(() => {
 
-    const slideLeftItems = gsap.utils.toArray(':not(.home) .slide-left');
+    const slideLeftItems = gsap.utils.toArray('.slide-up');
     slideLeftItems.forEach((item:any) => {
       var tl = gsap.timeline();
       tl.to(item, { y: 100, autoAlpha: 0, opacity: 0, transformOrigin: '0 0', duration: 0 });
@@ -50,6 +54,6 @@ export default function SanityImage( {image_data, image_size, have_source} :any)
   const altText = image_data?.asset?.altText || 'Imagen Blavet';
 
   return (
-      <Image className="slide-left" alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } />
+      <Image className={classes} alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } />
   );
 }
