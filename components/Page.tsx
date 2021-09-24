@@ -2,13 +2,12 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { lazy, Suspense } from 'react';
 
-// import CookieConsent from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 // const CookieConsent = lazy(() => import('../node_modules/react-cookie-consent/build/index'));
-const CookieConsent = dynamic(() => import('../node_modules/react-cookie-consent/build/index'));
+// const CookieConsent = dynamic(() => import('../node_modules/react-cookie-consent/build/index'));
 
 export default function Page({ children }:any) {
 

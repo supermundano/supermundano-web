@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-// import TagManager from 'react-gtm-module';
+import TagManager from 'react-gtm-module';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components';
 import { Countdown } from '../components/Countdown';
+import dynamic from 'next/dynamic';
+// const TagManager = dynamic(() => import('../node_modules/@types/react-gtm-module/index'));
 
 
 const GlobalStyle = createGlobalStyle`
@@ -228,9 +230,9 @@ function setInvisibleClass(body:any){
     body.classList.remove('hidden-overflow');
   },1000);
 }
-  // useEffect(() => {
-  //     TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
-  // }, []);
+  useEffect(() => {
+    async()=>{TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });}
+  }, []);
 
   return (
     <>
