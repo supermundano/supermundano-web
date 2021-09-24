@@ -30,7 +30,7 @@ export default function ProjectCard(project:Project) {
     <ProjectCardStyle>
       <Link href={slug}>
           <a>
-            <SanityImage image_data={ listImage } image_size="700" have_source={true}/>
+            <SanityImage image_data={ listImage } image_size="700" have_source={true} loading={true}/>
           </a>
       </Link>
       <h2 className="title">
