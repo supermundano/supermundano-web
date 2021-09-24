@@ -231,7 +231,7 @@ function setInvisibleClass(body:any){
   },1000);
 }
   useEffect(() => {
-    async()=>{TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });}
+    TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_KEY ? process.env.NEXT_PUBLIC_GTM_KEY : '' });
   }, []);
 
   return (
