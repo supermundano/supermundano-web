@@ -11,34 +11,36 @@ const GlobalStyleProject = createGlobalStyle`
   body{
     background: var(--bgSecondary) !important;
     color: var(--bgPrimary) !important;
-  }
 
-  a{
-    color: var(--bgPrimary) !important;
+    a{
+      color: var(--bgPrimary) !important;
 
-    &:hover{
+      &:hover{
+        color: var(--brandTertiary) !important;
+      }
+
+      &:after{
+        background: var(--brandTertiary) !important;
+      }
+    }
+
+    .footer-info-wrap div, h1{
+      a{
+        &:hover{
+          color: currentColor !important;
+        }
+      }
+    }
+
+    .secondary-title, .wrap__menu li a, .title-secondary{
       color: var(--brandTertiary) !important;
     }
 
-    &:after{
-      background: var(--brandTertiary) !important;
+    #countdown{
+      background: var(--bgSecondary) !important;
+      color: var(--bgPrimary) !important;
     }
   }
-
-  .footer-info-wrap div, h1{
-    a{
-      &:hover{
-        color: currentColor !important;
-      }
-    }
-  }
-
-  .secondary-title, .wrap__menu li a, .title-secondary{
-    color: var(--brandTertiary) !important;
-  }
-
-
-
 `;
 
 const Project = ( { data } : any ) => {

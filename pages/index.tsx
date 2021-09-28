@@ -7,6 +7,7 @@ import ProjectsContainer from '../components/ProjectsContainer'
 
 
 export default function Home( {data}:any ) {
+
   const  {featured_projects}  = data;
 
   return (
