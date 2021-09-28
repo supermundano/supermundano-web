@@ -60,6 +60,7 @@ export default function ServicesListSection() {
             <p>Instituto BME (Bolsas y Mercados Españoles)</p>
             <p>Club de Malasmadres</p>
             <p>Grupo Saona</p>
+            <p>Chocolates Valor</p>
             <p><Link href="/project/instituto-ginecologico-bau"><a>Instituto Ginecológico Bau</a></Link></p>
             <p>Dg Arquitectos</p>
             <p><Link href="/project/zalamero"><a>Zalamero</a></Link></p>
@@ -68,6 +69,7 @@ export default function ServicesListSection() {
             <p>Calma Chechu</p>
             <p>Fabián León Masterchef</p>
             <p>The Sunglasses Box</p>
+            <p>Banak</p>
             <p>R de Room</p>
             <p><Link href="/project/lada"><a>Lada Interiorismo</a></Link></p>
             <p>Dr. Anido</p>
