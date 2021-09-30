@@ -49,11 +49,17 @@ const Project = ( { data } : any ) => {
   const { colaborators } = data
   const { featured_image } = data
   const { contentRaw } = data
+  const { description } = data
+  console.log(featured_image.asset.url);
+
+
+
+  const ogTags:any = {"twitterHandle" : '', "currentURL" : '', "previewImage" : featured_image?.asset?.url, "siteName" : "Blavet Studio", "pageTitle" : title, "description": description};
 
   return (
     <>
     <GlobalStyleProject/>
-    <Page>
+    <Page ogTags={ogTags}>
       <div className="project">
         <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
         <ProjectEditorInfo content_raw={ contentRaw }/>
