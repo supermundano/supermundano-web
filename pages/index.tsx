@@ -9,10 +9,11 @@ import ProjectsContainer from '../components/ProjectsContainer'
 export default function Home( {data}:any ) {
 
   const  {featured_projects}  = data;
+  const ogTags:any = {"twitterHandle" : '', "currentURL" : '', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
 
   return (
     <div className="home">
-      <Page>
+      <Page ogTags={ogTags}>
         <PageDescription></PageDescription>
         <ProjectsContainer { ...featured_projects}></ProjectsContainer>
       </Page>

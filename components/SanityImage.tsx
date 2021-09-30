@@ -25,6 +25,7 @@ export default function SanityImage( {image_data, image_size, have_source, not_a
       tl.to(item, { y: 60, autoAlpha: 1, opacity: 1, transformOrigin: '0 0', duration: 0.4 });
       tl.to(item, { y: 0, autoAlpha: 1, opacity: 1, transformOrigin: '0 0', duration: 0.6 });
 
+
       ScrollTrigger.create({
         trigger: item,
         animation: tl,
@@ -32,6 +33,7 @@ export default function SanityImage( {image_data, image_size, have_source, not_a
         toggleActions: 'play none none none',
         once: true,
       });
+
     });
   }, [])
 
