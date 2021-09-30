@@ -54,7 +54,7 @@ const Project = ( { data } : any ) => {
 
 
 
-  const ogTags:any = {"twitterHandle" : '', "currentURL" : '', "previewImage" : featured_image?.asset?.url, "siteName" : "Blavet Studio", "pageTitle" : title, "description": description};
+  const ogTags:any = {"twitterHandle" : '', "previewImage" : featured_image?.asset?.url, "siteName" : "Blavet Studio", "pageTitle" : title, "description": description};
 
   return (
     <>

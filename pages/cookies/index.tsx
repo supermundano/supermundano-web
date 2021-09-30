@@ -3,9 +3,10 @@ import {ServicesTextSectionStyle} from '../../components/ServicesTextSection'
 
 
 export default function Servicios( ) {
+  const ogTags:any = {"twitterHandle" : '', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
   return (
     <div className="services">
-      <Page>
+      <Page ogTags={ogTags}>
         <ServicesTextSectionStyle>
           <div className="title">
               <h2 className="secondary-title">COOKIES POLICY</h2>
