@@ -28,9 +28,9 @@ const Content404Style = styled.div`
 
 export default function _404() {
 
-  const ogTags:any = {"twitterHandle" : '', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
+  const ogTags:any = {"twitterHandle" : '', "resourceType": 'website', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
   return (
-    <Page ogTags={ogTags}>
+    <Page ogTags={ogTags} canonicalURL="/404">
       <Content404Style>
         <div className="title">
           <h2 className="secondary-title">OOOOPS</h2>

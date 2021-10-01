@@ -43,23 +43,23 @@ const GlobalStyleProject = createGlobalStyle`
   }
 `;
 
-const Project = ( { data } : any ) => {
+const Project = ( { slug, data } : any ) => {
   const { title } = data
   const { services } = data
   const { colaborators } = data
   const { featured_image } = data
   const { contentRaw } = data
   const { description } = data
-  console.log(featured_image.asset.url);
+  console.log(slug);
 
 
 
-  const ogTags:any = {"twitterHandle" : '', "previewImage" : featured_image?.asset?.url, "siteName" : "Blavet Studio", "pageTitle" : title, "description": description};
+  const ogTags:any = {"twitterHandle" : '', "resourceType": 'article', "previewImage" : featured_image?.asset?.url, "siteName" : "Blavet Studio", "pageTitle" : title, "description": description};
 
   return (
     <>
     <GlobalStyleProject/>
-    <Page ogTags={ogTags}>
+    <Page ogTags={ogTags} canonicalURL={`/project/${slug}`}>
       <div className="project">
         <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
         <ProjectEditorInfo content_raw={ contentRaw }/>
@@ -101,5 +101,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const project = allProject[0];
 
   // Pass post data to the page via props
-  return { props: { data : project } }
+  return { props: { data : project, slug : params?.id } }
 }

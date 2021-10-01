@@ -9,7 +9,7 @@ import ProjectsContainer from '../components/ProjectsContainer';
 export default function Home( {data}:any ) {
 
   const  {featured_projects}  = data;
-  const ogTags:any = {"twitterHandle" : '', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
+  const ogTags:any = {"twitterHandle" : '', "resourceType": 'website', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
 
   return (
     <div className="home">
