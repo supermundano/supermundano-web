@@ -44,6 +44,7 @@ export default function Page({ children, ogTags }:any) {
 
         {/* Open Graph */}
         <meta property="og:url" content={currentURL} key="ogurl" />
+        <meta property="og:type" content="article" />
         <meta property="og:image" content={ogTags['previewImage']} key="ogimage" />
         <meta property="og:site_name" content={ogTags['siteName']} key="ogsitename" />
         <meta property="og:title" content={ogTags['pageTitle']} key="ogtitle" />

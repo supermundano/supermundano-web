@@ -1,0 +1,6 @@
+# Specify allowed crawlers (e.g Googlebot, Slurp, Yandex)
+User-agent: *
+Allow: /
+Disallow: /search
+Crawl-delay: 1
+Sitemap: sitemap
