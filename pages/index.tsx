@@ -9,7 +9,11 @@ import ProjectsContainer from '../components/ProjectsContainer';
 export default function Home( {data}:any ) {
 
   const  {featured_projects}  = data;
+<<<<<<< HEAD
   const ogTags:any = {"twitterHandle" : '', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
+=======
+  const ogTags:any = {"twitterHandle" : '', "currentURL" : '', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
+>>>>>>> ab2fd65 (Set title and images dinamically with OG meta tags)
 
   return (
     <div className="home">
