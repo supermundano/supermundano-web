@@ -1,5 +1,4 @@
-import dynamic from 'next/dynamic';
-const Page = dynamic( ()=>  import('../../components/Page'));
+import Page from '../../components/Page';
 import { ServicesTextSectionStyle } from '../../components/ServicesTextSection';
 
 

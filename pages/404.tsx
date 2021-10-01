@@ -1,5 +1,4 @@
-import dynamic from 'next/dynamic';
-const Page = dynamic( ()=>  import('../components/Page'));
+import Page from '../components/Page';
 import Link from 'next/link';
 import styled from "styled-components"
 
