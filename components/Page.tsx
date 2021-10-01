@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 const Head = dynamic( ()=>  import('next/head'));
-const Header = dynamic( ()=>  import('./Header'));
-const Footer = dynamic( ()=>  import('./Footer'));
+import Header from './Header';
+import Footer from './Footer';
 import { motion } from 'framer-motion'
 
 import CookieConsent from "react-cookie-consent";
