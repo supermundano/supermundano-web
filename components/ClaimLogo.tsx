@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Link from 'next/link'
-
-import BlavetLogo from '../public/static/svg/blavet-logo.svg'
+import dynamic from 'next/dynamic';
+const Link = dynamic( ()=>  import('next/link'));
+const BlavetLogo = dynamic( ()=>  import('../public/static/svg/blavet-logo.svg'));
 
 const ClaimLogoStyles = styled.div`
   letter-spacing: 0;

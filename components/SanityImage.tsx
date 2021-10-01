@@ -1,8 +1,9 @@
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
+const Image = dynamic( ()=>  import('next/image'));
 import { getImageProps } from '../lib/sanity';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 export default function SanityImage( {image_data, image_size, have_source, not_animated} :any) {
   gsap.registerPlugin(ScrollTrigger);

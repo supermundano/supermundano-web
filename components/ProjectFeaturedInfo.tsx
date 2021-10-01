@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { getImage } from '@sanity/asset-utils'
-import { Fragment } from 'react'
-import SanityImage from '../components/SanityImage'
+import dynamic from 'next/dynamic';
+const SanityImage = dynamic( ()=>  import('../components/SanityImage'));
 
 const ProjectFeaturedInfoStyle = styled.div`
 

@@ -1,4 +1,5 @@
-import Page from '../components/Page';
+import dynamic from 'next/dynamic';
+const Page = dynamic( ()=>  import('../components/Page'));
 import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
 import { GetStaticProps } from 'next';

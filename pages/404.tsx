@@ -1,5 +1,6 @@
-import Page from '../components/Page'
-import Link from 'next/link'
+import dynamic from 'next/dynamic';
+const Page = dynamic( ()=>  import('../components/Page'));
+const Link = dynamic( ()=>  import('next/link'));
 import styled from "styled-components"
 
 const Content404Style = styled.div`

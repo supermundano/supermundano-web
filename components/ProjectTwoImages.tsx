@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import SanityImage from "./SanityImage";
+import dynamic from 'next/dynamic';
+const SanityImage = dynamic( ()=>  import('./SanityImage'));
 
 const TwoImagesStyle = styled.div`
   display: grid;

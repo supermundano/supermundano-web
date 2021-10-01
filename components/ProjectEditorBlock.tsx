@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-import TwoImages from './ProjectTwoImages'
-import SingleImage from './ProjectSingleImage'
-
 const ProjectEditorInfoStyle = styled.div`
   margin-top: 2.5rem;
 
