@@ -5,16 +5,10 @@ import { motion } from 'framer-motion'
 
 import CookieConsent from "react-cookie-consent";
 import Link from 'next/link'
-import { useEffect, useState } from 'react';
 
-export default function Page({ children, ogTags }:any) {
-  const [currentURL, setCurrentURL] = useState('');
-  useEffect(()=>{
-    setCurrentURL(`${window.location}`);
-    console.log(currentURL);
+export default function Page({ children, ogTags, canonicalURL }:any) {
 
-  },[currentURL]);
-
+  canonicalURL = `https://blavetstudio.com${canonicalURL ? canonicalURL : ''}`;
   return (
     <>
     <motion.div
@@ -38,15 +32,15 @@ export default function Page({ children, ogTags }:any) {
       <Head>
         <title>Blavet</title>
         <meta name="description" content="Creative Brands in Context" />
-        <link rel="canonical" href={currentURL} />
+        <link rel="canonical" href={canonicalURL} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard" />
         <meta name="twitter:creator" content={ogTags['twitterHandle']} key="twhandle" />
 
         {/* Open Graph */}
-        <meta property="og:url" content={currentURL} key="ogurl" />
-        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalURL} key="ogurl" />
+        <meta property="og:type" content={ogTags['resourceType']} />
         <meta property="og:image" content={ogTags['previewImage']} key="ogimage" />
         <meta property="og:site_name" content={ogTags['siteName']} key="ogsitename" />
         <meta property="og:title" content={ogTags['pageTitle']} key="ogtitle" />
