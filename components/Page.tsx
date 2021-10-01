@@ -6,8 +6,9 @@ import { motion } from 'framer-motion'
 import CookieConsent from "react-cookie-consent";
 import Link from 'next/link'
 
-export default function Page({ children }:any) {
+export default function Page({ children, ogTags, canonicalURL }:any) {
 
+  canonicalURL = `https://blavetstudio.com${canonicalURL ? canonicalURL : ''}`;
   return (
     <>
     <motion.div
@@ -31,6 +32,20 @@ export default function Page({ children }:any) {
       <Head>
         <title>Blavet</title>
         <meta name="description" content="Creative Brands in Context" />
+        <link rel="canonical" href={canonicalURL} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content={ogTags['twitterHandle']} key="twhandle" />
+
+        {/* Open Graph */}
+        <meta property="og:url" content={canonicalURL} key="ogurl" />
+        <meta property="og:type" content={ogTags['resourceType']} />
+        <meta property="og:image" content={ogTags['previewImage']} key="ogimage" />
+        <meta property="og:site_name" content={ogTags['siteName']} key="ogsitename" />
+        <meta property="og:title" content={ogTags['pageTitle']} key="ogtitle" />
+        <meta property="og:description" content={ogTags['description']} key="ogdesc" />
+
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>
         <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
