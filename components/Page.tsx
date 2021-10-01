@@ -38,6 +38,8 @@ export default function Page({ children, ogTags }:any) {
       <Head>
         <title>Blavet</title>
         <meta name="description" content="Creative Brands in Context" />
+        <link rel="canonical" href={currentURL} />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard" />
         <meta name="twitter:creator" content={ogTags['twitterHandle']} key="twhandle" />

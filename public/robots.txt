@@ -1,6 +1,4 @@
 # Specify allowed crawlers (e.g Googlebot, Slurp, Yandex)
 User-agent: *
 Allow: /
-Disallow: /search
-Crawl-delay: 1
-Sitemap: sitemap
+Sitemap: https://deploy-preview-8--blavetstudio.netlify.app/sitemap.xml
