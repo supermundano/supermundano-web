@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import dynamic from 'next/dynamic';
-const TwoImages = dynamic( ()=>  import('./ProjectTwoImages'));
-const SingleImage = dynamic( ()=>  import('./ProjectSingleImage'));
-const ProjectEditorBlock = dynamic( ()=>  import('./ProjectEditorBlock'));
+
+import TwoImages from './ProjectTwoImages'
+import SingleImage from './ProjectSingleImage'
+import ProjectEditorBlock from "./ProjectEditorBlock";
 
 const ProjectEditorInfoStyle = styled.div`
   margin-top: 2.5rem;
@@ -25,6 +25,7 @@ const ProjectEditorInfoStyle = styled.div`
 `;
 
 export default function ProjectEditorInfo(content_raw:any) {
+  var block_data : any;
   var inner_data : any;
   return(
     <>

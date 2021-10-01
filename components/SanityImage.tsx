@@ -1,5 +1,4 @@
-import dynamic from 'next/dynamic';
-const Image = dynamic( ()=>  import('next/image'));
+import Image from 'next/image';
 import { getImageProps } from '../lib/sanity';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

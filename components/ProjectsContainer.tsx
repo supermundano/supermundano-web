@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Project from '../models/project'
-import dynamic from 'next/dynamic';
-const ProjectCard = dynamic( ()=>  import('./ProjectCard'));
+import ProjectCard from './ProjectCard'
 
 const ProjectsContainerStyles = styled.section`
 display: grid;

@@ -1,7 +1,7 @@
-import dynamic from 'next/dynamic';
-const Link = dynamic( ()=>  import('next/link'));
-const ClaimLogo = dynamic( ()=>  import('./ClaimLogo'));
+import Link from 'next/link';
 import styled from 'styled-components';
+import MenuLink from '../models/links';
+import ClaimLogo from './ClaimLogo'
 
 const FooterTag = styled.footer`
   width: 100%;

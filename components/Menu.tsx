@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import MenuLink from '../models/links'
-import dynamic from 'next/dynamic';
-const MenuItem = dynamic( ()=>  import('./MenuItem'));
+import MenuItem from './MenuItem';
 
 const MenuStyles = styled.ul`
   list-style: none;

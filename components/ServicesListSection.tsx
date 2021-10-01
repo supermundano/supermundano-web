@@ -1,7 +1,6 @@
 import styled from "styled-components"
-import dynamic from 'next/dynamic';
-const Link = dynamic( ()=>  import('next/link'));
-const ServicesListItem = dynamic( ()=>  import('./ServicesListItem'));
+import ServicesListItem from "./ServicesListItem"
+import Link from 'next/link'
 
 export const ServicesListSectionStyle = styled.div`
   margin-bottom: 5rem;

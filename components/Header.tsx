@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import dynamic from 'next/dynamic';
-const Menu = dynamic( ()=>  import('./Menu'));
-const ClaimLogo = dynamic( ()=>  import('./ClaimLogo'));
 import MenuLink from '../models/links';
+import Menu from './Menu'
+import ClaimLogo from './ClaimLogo'
 
 const HeaderStyles = styled.header`
     width: 100%;

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import Project from '../models/project'
-import dynamic from 'next/dynamic';
-const Link = dynamic( ()=>  import('next/link'));
-const SanityImage = dynamic( ()=>  import('../components/SanityImage'));
+import Link from 'next/link'
 import { getImage } from '@sanity/asset-utils'
+import SanityImage from '../components/SanityImage'
 
 const ProjectCardStyle = styled.article`
   img{
