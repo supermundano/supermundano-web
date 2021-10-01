@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 
 import CookieConsent from "react-cookie-consent";
 import Link from 'next/link'
+import { useEffect, useState } from 'react';
 
 export default function Page({ children, ogTags, canonicalURL }:any) {
 
