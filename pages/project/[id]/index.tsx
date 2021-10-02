@@ -1,10 +1,14 @@
+import dynamic from 'next/dynamic'
 import { getSanityContent } from '../../../lib/sanity'
 import { allProjectsQuery, singleProjectQuery } from '../../../lib/queries'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { createGlobalStyle } from 'styled-components'
-import Page from '../../../components/Page'
-import ProjectFeaturedInfo from '../../../components/ProjectFeaturedInfo'
-import ProjectEditorInfo from '../../../components/ProjectEditorInfo'
+// import Page from '../../../components/Page'
+// import ProjectFeaturedInfo from '../../../components/ProjectFeaturedInfo'
+// import ProjectEditorInfo from '../../../components/ProjectEditorInfo'
+const Page = dynamic(() => import('../../../components/Page'))
+const ProjectFeaturedInfo = dynamic(() => import('../../../components/ProjectFeaturedInfo'))
+const ProjectEditorInfo = dynamic(() => import('../../../components/ProjectEditorInfo'))
 
 
 const GlobalStyleProject = createGlobalStyle`
@@ -60,8 +64,8 @@ const Project = ( { slug, data } : any ) => {
     <GlobalStyleProject/>
     <Page ogTags={ogTags} canonicalURL={`/project/${slug}`}>
       <div className="project">
-        <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
-        <ProjectEditorInfo content_raw={ contentRaw }/>
+        {/* <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
+        <ProjectEditorInfo content_raw={ contentRaw }/> */}
       </div>
     </Page>
     </>
