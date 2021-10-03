@@ -64,8 +64,8 @@ const Project = ( { slug, data } : any ) => {
     <GlobalStyleProject/>
     <Page ogTags={ogTags} canonicalURL={`/project/${slug}`}>
       <div className="project">
-        {/* <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
-        <ProjectEditorInfo content_raw={ contentRaw }/> */}
+        <ProjectFeaturedInfo title={title} services={services} colabs={colaborators} featured_image={featured_image} />
+        <ProjectEditorInfo content_raw={ contentRaw }/>
       </div>
     </Page>
     </>
