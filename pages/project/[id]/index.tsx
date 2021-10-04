@@ -3,10 +3,10 @@ import { getSanityContent } from '../../../lib/sanity'
 import { allProjectsQuery, singleProjectQuery } from '../../../lib/queries'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { createGlobalStyle } from 'styled-components'
-// import Page from '../../../components/Page'
+import Page from '../../../components/Page'
 // import ProjectFeaturedInfo from '../../../components/ProjectFeaturedInfo'
 // import ProjectEditorInfo from '../../../components/ProjectEditorInfo'
-const Page = dynamic(() => import('../../../components/Page'))
+// const Page = dynamic(() => import('../../../components/Page'))
 const ProjectFeaturedInfo = dynamic(() => import('../../../components/ProjectFeaturedInfo'))
 const ProjectEditorInfo = dynamic(() => import('../../../components/ProjectEditorInfo'))
 
