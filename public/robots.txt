@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 Crawl-delay: 1
-Sitemap: https://deploy-preview-8--blavetstudio.netlify.app/sitemap.xml
+Sitemap: https://blavetstudio.com/sitemap.xml
