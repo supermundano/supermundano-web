@@ -4,8 +4,8 @@ import { getSanityContent } from '../lib/sanity';
 import { featuredProjectsQuery } from '../lib/queries';
 import { GetStaticProps } from 'next';
 import PageDescription from '../components/PageDescription';
-// import ProjectsContainer from '../components/ProjectsContainer';
-const ProjectsContainer = dynamic(() => import('../components/ProjectsContainer'))
+import ProjectsContainer from '../components/ProjectsContainer';
+// const ProjectsContainer = dynamic(() => import('../components/ProjectsContainer'))
 
 
 export default function Home( {data}:any ) {
