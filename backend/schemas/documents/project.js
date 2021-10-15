@@ -44,32 +44,12 @@ const Project = {
     {
       title: "Imagen listado",
       name: "list_image",
-      type: "image",
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Texto Alternativo',
-          options: {
-            isHighlighted: true // <-- make this field easily accessible
-          }
-        },
-      ]
+      type: "extendedImage",
     },
     {
       title: "Imagen destacada",
       name: "featured_image",
-      type: "image",
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Texto Alternativo',
-          options: {
-            isHighlighted: true // <-- make this field easily accessible
-          }
-        },
-      ]
+      type: "extendedImage",
     },
     {
       title: 'Colaboradores',
@@ -92,18 +72,8 @@ const Project = {
     {
       title: "Imagen SEO",
       name: "image_seo",
-      type: "image",
+      type: "extendedImage",
       fieldset: 'seo',
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Texto Alternativo',
-          options: {
-            isHighlighted: true // <-- make this field easily accessible
-          }
-        },
-      ]
     },
     {
       title: "Título SEO",
@@ -122,18 +92,8 @@ const Project = {
     {
       title: "Imagen Twitter",
       name: "image_twitter",
-      type: "image",
+      type: "extendedImage",
       fieldset: 'seo',
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Texto Alternativo',
-          options: {
-            isHighlighted: true // <-- make this field easily accessible
-          }
-        },
-      ]
     },
     {
       title: "Título Twitter",

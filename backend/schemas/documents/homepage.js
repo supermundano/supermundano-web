@@ -3,7 +3,6 @@ const Homepage = {
   title: "Opciones generales",
   name: "homepage",
   type: "document",
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',

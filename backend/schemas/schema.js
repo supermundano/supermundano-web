@@ -5,11 +5,14 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 
-// Import both schemas
+// Import types
+import extendedImage from './types/extendedImage';
+import images from './types/images';
+
+// Import schemas
 import Homepage from './documents/homepage';
 import Project from './documents/project';
 import BlockContent from './blocks/blockContent';
-import images from './types/images';
 import TwoImages from './blocks/twoImages';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -19,9 +22,13 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
+    // Types
+    extendedImage,
+    images,
+
+    // Schemas
     Homepage,
     Project,
-    images,
     TwoImages,
     BlockContent,
   ])
