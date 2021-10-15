@@ -3,7 +3,16 @@ const Project = {
   title: "Proyectos",
   name: "project",
   type: "document",
-
+  fieldsets: [
+    {
+      name: 'seo',
+      title: 'SEO',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
+    }
+  ],
   fields: [
     {
       title: "Título",
@@ -78,6 +87,67 @@ const Project = {
       name: 'content',
       type: 'blockContent',
     },
+
+    // SEO
+    {
+      title: "Imagen SEO",
+      name: "image_seo",
+      type: "image",
+      fieldset: 'seo',
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texto Alternativo',
+          options: {
+            isHighlighted: true // <-- make this field easily accessible
+          }
+        },
+      ]
+    },
+    {
+      title: "Título SEO",
+      name: "title_seo",
+      type: "string",
+      fieldset: 'seo',
+    },
+    {
+      title: "Descripción SEO",
+      name: "description_seo",
+      type: "text",
+      fieldset: 'seo',
+    },
+
+    // SEO Twitter
+    {
+      title: "Imagen Twitter",
+      name: "image_twitter",
+      type: "image",
+      fieldset: 'seo',
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texto Alternativo',
+          options: {
+            isHighlighted: true // <-- make this field easily accessible
+          }
+        },
+      ]
+    },
+    {
+      title: "Título Twitter",
+      name: "title_twitter",
+      type: "string",
+      fieldset: 'seo',
+    },
+    {
+      title: "Descripción Twitter",
+      name: "description_twitter",
+      type: "text",
+      fieldset: 'seo',
+    },
+
     {
       title: 'Relacionados',
       name: 'related',
