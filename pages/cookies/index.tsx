@@ -3,7 +3,18 @@ import {ServicesTextSectionStyle} from '../../components/ServicesTextSection'
 
 
 export default function Servicios( ) {
-  const ogTags:any = {"twitterHandle" : '', "resourceType": 'website', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
+  const ogTags:any = {
+    "resourceType": 'website',
+    "previewImage" : '',
+    "siteName" : "Blavet Studio",
+    "ogTitle" : "Blavet",
+    "titleTwitter" : '',
+    "description": '',
+    "descriptionSeo": "Creative Brands in Context",
+    "descriptionTwitter" : '',
+    "imageTwitter" : ''
+  };
+
   return (
     <div className="services">
       <Page ogTags={ogTags} canonicalURL="/cookies">

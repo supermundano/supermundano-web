@@ -28,7 +28,18 @@ const Content404Style = styled.div`
 
 export default function _404() {
 
-  const ogTags:any = {"twitterHandle" : '', "resourceType": 'website', "previewImage" : '', "siteName" : "Blavet Studio", "pageTitle" : "Blavet", "description": "Creative Brands in Context"};
+  const ogTags:any = {
+    "resourceType": 'website',
+    "previewImage" : '',
+    "siteName" : "Blavet Studio",
+    "ogTitle" : "Blavet",
+    "titleTwitter" : '',
+    "description" : '',
+    "descriptionSeo": "Creative Brands in Context",
+    "descriptionTwitter" : '',
+    "imageTwitter" : ''
+  };
+
   return (
     <Page ogTags={ogTags} canonicalURL="/404">
       <Content404Style>

@@ -21,15 +21,13 @@ export default function SanityImage( {image_data, image_size, have_source, not_a
     const slideLeftItems = gsap.utils.toArray('.slide-up');
     slideLeftItems.forEach((item:any) => {
       var tl = gsap.timeline();
-      tl.to(item, { y: 100, autoAlpha: 0, opacity: 0, transformOrigin: '0 0', duration: 0 });
-      tl.to(item, { y: 60, autoAlpha: 1, opacity: 1, transformOrigin: '0 0', duration: 0.4 });
-      tl.to(item, { y: 0, autoAlpha: 1, opacity: 1, transformOrigin: '0 0', duration: 0.6 });
+      tl.to(item, { y: 100, autoAlpha: 0, opacity: 0, duration: 0 });
+      tl.to(item, { y: 0, autoAlpha: 1, opacity: 1, duration: 0.6 });
 
 
       ScrollTrigger.create({
         trigger: item,
         animation: tl,
-        invalidateOnRefresh: true,
         toggleActions: 'play none none none',
         once: true,
       });

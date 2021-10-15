@@ -5,10 +5,18 @@ import { motion } from 'framer-motion'
 
 import CookieConsent from "react-cookie-consent";
 import Link from 'next/link'
+import DefaultShareImg from '../public/android-chrome-192x192.png';
 
 export default function Page({ children, ogTags, canonicalURL }:any) {
 
   canonicalURL = `https://blavetstudio.com${canonicalURL ? canonicalURL : ''}`;
+  if(ogTags['description'] === ''){
+    ogTags['description'] = 'Creative Brands in Context';
+  }
+
+  let mainImageSEO = 'https://blavetstudio.com'+DefaultShareImg.src;
+  ogTags['previewImage'] = (ogTags['previewImage'] !== '') ? ogTags['previewImage'] : mainImageSEO;
+
   return (
     <>
     <motion.div
@@ -31,20 +39,26 @@ export default function Page({ children, ogTags, canonicalURL }:any) {
       >
       <Head>
         <title>Blavet</title>
-        <meta name="description" content="Creative Brands in Context" />
+        <meta name="description" content={ogTags['description']} />
         <link rel="canonical" href={canonicalURL} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard" />
-        <meta name="twitter:creator" content={ogTags['twitterHandle']} key="twhandle" />
+        <meta name="twitter:creator" content='BlavetStudio' key="twhandle" />
+
+        { (ogTags['descriptionTwitter'] !== '') ? <meta name="twitter:description" content={ogTags['descriptionTwitter']} /> : '' }
+
+        { (ogTags['titleTwitter'] !== '') ? <meta name="twitter:title" content={ogTags['titleTwitter']} /> : '' }
+
+        { (ogTags['imageTwitter'] !== '') ? <meta name="twitter:image" content={ogTags['imageTwitter']} /> : '' }
 
         {/* Open Graph */}
         <meta property="og:url" content={canonicalURL} key="ogurl" />
         <meta property="og:type" content={ogTags['resourceType']} />
         <meta property="og:image" content={ogTags['previewImage']} key="ogimage" />
         <meta property="og:site_name" content={ogTags['siteName']} key="ogsitename" />
-        <meta property="og:title" content={ogTags['pageTitle']} key="ogtitle" />
-        <meta property="og:description" content={ogTags['description']} key="ogdesc" />
+        <meta property="og:title" content={ogTags['ogTitle']} key="ogtitle" />
+        <meta property="og:description" content={ogTags['descriptionSeo']} key="ogdesc" />
 
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/uum7jsn.css"></link>

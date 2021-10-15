@@ -54,10 +54,26 @@ const Project = ( { slug, data } : any ) => {
   const { featured_image } = data
   const { contentRaw } = data
   const { description } = data
+  const { title_seo } = data;
+  const { description_seo } = data;
+  const { image_seo } = data;
+  const { title_twitter } = data;
+  const { description_twitter } = data;
+  const { image_twitter } = data;
 
 
 
-  const ogTags:any = {"twitterHandle" : '', "resourceType": 'article', "previewImage" : featured_image?.asset?.url, "siteName" : "Blavet Studio", "pageTitle" : title, "description": description};
+  const ogTags:any = {
+    "resourceType": 'article',
+    "previewImage" : (image_seo) ? image_seo : featured_image?.asset?.url,
+    "siteName" : "Blavet Studio",
+    "ogTitle" : (title_seo) ? title_seo : title,
+    "titleTwitter" : (title_twitter) ? title_twitter : '',
+    "description": description,
+    "descriptionSeo": (description_seo) ? description_seo : description,
+    "descriptionTwitter" : (description_twitter) ? description_twitter : '',
+    "imageTwitter" : (image_twitter) ? image_twitter : ''
+  };
 
   return (
     <>
