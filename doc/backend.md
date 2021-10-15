@@ -1,5 +1,7 @@
 # backend
 
+node version 14.11.0
+
 ## Sanity
 
 npm install -g @sanity/cli && sanity init
