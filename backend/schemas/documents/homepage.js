@@ -1,10 +1,15 @@
 // Then we give our schema to the builder and provide the result to Sanity
 const Homepage = {
-  title: "Homepage",
+  title: "Opciones generales",
   name: "homepage",
   type: "document",
-
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
+    {
+      name: 'title',
+      title: 'Site Title',
+      type: 'string'
+    },
     {
       title: 'Destacados',
       name: 'featured_projects',
@@ -16,8 +21,9 @@ const Homepage = {
             {type: 'project'},
           ]
         }
-      ]
-    }
+      ],
+    },
+
   ],
 
 }
