@@ -45,7 +45,19 @@ const BlockContent = {
       }
     },
     { type: 'twoImages' },
-    { type: 'image' },
+    {
+      type: 'image',
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texto Alternativo',
+          options: {
+            isHighlighted: true // <-- make this field easily accessible
+          }
+        },
+      ]
+    },
   ]
 }
 

@@ -36,11 +36,31 @@ const Project = {
       title: "Imagen listado",
       name: "list_image",
       type: "image",
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texto Alternativo',
+          options: {
+            isHighlighted: true // <-- make this field easily accessible
+          }
+        },
+      ]
     },
     {
       title: "Imagen destacada",
       name: "featured_image",
       type: "image",
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texto Alternativo',
+          options: {
+            isHighlighted: true // <-- make this field easily accessible
+          }
+        },
+      ]
     },
     {
       title: 'Colaboradores',
@@ -54,6 +74,11 @@ const Project = {
       of: [{type: 'string'}]
     },
     {
+      title: 'Contenido',
+      name: 'content',
+      type: 'blockContent',
+    },
+    {
       title: 'Relacionados',
       name: 'related',
       type: 'array',
@@ -65,11 +90,6 @@ const Project = {
           ]
         }
       ]
-    },
-    {
-      title: 'Contenido',
-      name: 'content',
-      type: 'blockContent',
     },
   ]
 }
