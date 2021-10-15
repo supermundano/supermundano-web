@@ -61,18 +61,23 @@ const Project = ( { slug, data } : any ) => {
   const { description_twitter } = data;
   const { image_twitter } = data;
 
+  console.log(data);
+
+
 
 
   const ogTags:any = {
     "resourceType": 'article',
     "previewImage" : (image_seo) ? image_seo : featured_image?.asset?.url,
+    "previewImageAlt" : (image_seo?.asset?.altText) ? image_seo?.asset?.altText : featured_image?.asset?.altText,
     "siteName" : "Blavet Studio",
     "ogTitle" : (title_seo) ? title_seo : title,
     "titleTwitter" : (title_twitter) ? title_twitter : '',
     "description": description,
     "descriptionSeo": (description_seo) ? description_seo : description,
     "descriptionTwitter" : (description_twitter) ? description_twitter : '',
-    "imageTwitter" : (image_twitter) ? image_twitter : ''
+    "imageTwitter" : (image_twitter) ? image_twitter : '',
+    "imageTwitterAlt" : ''
   };
 
   return (

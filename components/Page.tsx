@@ -52,10 +52,13 @@ export default function Page({ children, ogTags, canonicalURL }:any) {
 
         { (ogTags['imageTwitter'] !== '') ? <meta name="twitter:image" content={ogTags['imageTwitter']} /> : '' }
 
+        { (ogTags['imageTwitter'] !== '') ? <meta name="twitter:image:alt" content={ogTags['imageTwitterAlt']} /> : '' }
+
         {/* Open Graph */}
         <meta property="og:url" content={canonicalURL} key="ogurl" />
         <meta property="og:type" content={ogTags['resourceType']} />
         <meta property="og:image" content={ogTags['previewImage']} key="ogimage" />
+        <meta property="og:image:alt" content={ogTags['previewImageAlt']}/>
         <meta property="og:site_name" content={ogTags['siteName']} key="ogsitename" />
         <meta property="og:title" content={ogTags['ogTitle']} key="ogtitle" />
         <meta property="og:description" content={ogTags['descriptionSeo']} key="ogdesc" />

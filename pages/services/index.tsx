@@ -6,13 +6,15 @@ export default function Servicios() {
   const ogTags:any = {
     "resourceType": 'website',
     "previewImage" : '',
+    "previewImageAlt" : '',
     "siteName" : "Blavet Studio",
     "ogTitle" : "Blavet",
     "titleTwitter" : '',
     "description": '',
     "descriptionSeo": "Creative Brands in Context",
     "descriptionTwitter" : '',
-    "imageTwitter" : ''
+    "imageTwitter" : '',
+    "imageTwitterAlt" : ''
   };
 
   return (
