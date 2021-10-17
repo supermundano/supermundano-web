@@ -25,11 +25,11 @@ export default function ProjectTwoImages( { image1, image2 }:any ) {
     return(
       <TwoImagesStyle>
         <div className="project-editor-image">
-          <SanityImage key={image1._key} image_data={ image1 }/>
+          <SanityImage key={image1._key} image_data={ image1 } image_alt={ image1.alt }/>
         </div>
 
         <div className="project-editor-image">
-          <SanityImage key={image2._key} image_data={ image2 }/>
+          <SanityImage key={image2._key} image_data={ image2 } image_alt={ image2.alt }/>
         </div>
       </TwoImagesStyle>
     )

@@ -16,7 +16,7 @@ const SingleImageStyle = styled.div`
 export default function ProjectSingleImage( { image }:any ) {
     return(
       <SingleImageStyle>
-          <SanityImage key={image._key} image_data={ image }/>
+          <SanityImage key={image._key} image_data={ image } />
       </SingleImageStyle>
     )
 }

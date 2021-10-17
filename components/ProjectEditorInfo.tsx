@@ -40,6 +40,11 @@ export default function ProjectEditorInfo(content_raw:any) {
                     <TwoImages key={ bloque[1]?._key } image1={ bloque[1]?.images[0] } image2={ bloque[1]?.images[1]} />
                     )
 
+                case 'extendedImage':
+                    return (
+                      <SingleImage key={bloque[1]._key} image={ bloque[1] }/>
+                    )
+
                 case 'image':
                     return (
                       <SingleImage key={bloque[1]._key} image={ bloque[1] }/>

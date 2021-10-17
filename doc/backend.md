@@ -43,7 +43,3 @@ https://www.sanity.io/docs/graphql
 https://www.smashingmagazine.com/2020/12/mdx-stored-sanity-next-js-website/
 https://www.freecodecamp.org/news/how-to-fetch-graphql-data-in-next-js-with-apollo-graphql/#what-is-apollo-graphql
 
-
-## Next
-- Typescript - https://nextjs.org/docs/basic-features/typescript
-https://dev.to/jameswallis/different-ways-to-fetch-data-in-next-js-server-side-and-when-to-use-them-1jb0

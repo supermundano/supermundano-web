@@ -11,8 +11,8 @@ export const featuredProjectsQuery = `
         list_image{
           asset{
             url
-            alt
           }
+          alt
         }
       }
     }
@@ -38,31 +38,31 @@ export const singleProjectQuery = `
       description
       list_image{
         asset{
-          alt
           url
         }
+        alt
       }
       featured_image{
         asset{
-          alt
           url
         }
+        alt
       }
       colaborators
       services
       image_seo{
         asset{
-          alt
           url
         }
+        alt
       }
       title_seo
       description_seo
       image_twitter{
         asset{
-          alt
           url
         }
+        alt
       }
       title_twitter
       description_twitter

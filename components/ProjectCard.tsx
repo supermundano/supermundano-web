@@ -21,8 +21,7 @@ const ProjectCardStyle = styled.article`
 `;
 
 export default function ProjectCard(project:Project) {
-
-  const listImage = getImage(project.list_image)
+  const listImage = project.list_image ? getImage(project.list_image) : null;
 
   var slug = `/project/${project.slug}`;
 
@@ -30,7 +29,9 @@ export default function ProjectCard(project:Project) {
     <ProjectCardStyle>
       <Link href={slug}>
           <a>
-            <SanityImage image_data={ listImage } image_size="700" have_source={true} not_animated={true}/>
+            {/* TODO: have_source no debería ser has_source? */}
+            {/* TODO: not_animated no debería ser animated? (not_animated = false sería que está animado? muy enrevesado...) No se deben negar los nombres de las variables */}
+            <SanityImage image_data={ listImage } image_alt={project.list_image_alt} image_size="700" have_source={true} not_animated={true}/>
           </a>
       </Link>
       <h2 className="title">

@@ -23,7 +23,7 @@ export default function ProjectsContainer( projects:Project[] ) {
     return  (
           <ProjectsContainerStyles>
           {Object.entries(projects).map(function(project:any, index){
-            projectVar = new Project(project[1].title, project[1].description, project[1].list_image?.asset?.url, project[1].slug?.current);
+            projectVar = new Project(project[1].title, project[1].description, project[1].list_image?.asset?.url, project[1].list_image?.alt, project[1].slug?.current);
             return (
                 <ProjectCard key={index} {...projectVar}/>
             )

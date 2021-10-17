@@ -61,11 +61,6 @@ const Project = ( { slug, data } : any ) => {
   const { description_twitter } = data;
   const { image_twitter } = data;
 
-  console.log(data);
-
-
-
-
   const ogTags:any = {
     "resourceType": 'article',
     "previewImage" : (image_seo) ? image_seo : featured_image?.asset?.url,

@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect } from 'react';
 
-export default function SanityImage( {image_data, image_size, have_source, not_animated} :any) {
+export default function SanityImage( {image_data, image_alt, image_size, have_source, not_animated} :any) {
   gsap.registerPlugin(ScrollTrigger);
   var classes = '';
 
@@ -35,6 +35,10 @@ export default function SanityImage( {image_data, image_size, have_source, not_a
     });
   }, [])
 
+  if( ! image_data ){
+    return null;
+  }
+
   var image_ref;
 
   // Save image path depending if we got all source or only referral to get its properties
@@ -46,7 +50,7 @@ export default function SanityImage( {image_data, image_size, have_source, not_a
 
   const imageProps = getImageProps(image_ref);
   const src = (typeof imageProps?.src === 'string') ? imageProps?.src : '';
-  const altText = image_data?.asset?.alt || 'Imagen Blavet';
+  const altText = image_alt || image_data?.asset?.altText || 'Imagen Blavet';
 
   return (
       <Image className={classes} alt={altText} src={src} {...imageProps} layout="responsive" sizes={`(max-width: ${image_size}px) 100vw, ${image_size}px` } />

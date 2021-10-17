@@ -111,7 +111,7 @@ export default function ProjectFeaturedInfo( {title, services, colabs, featured_
 
           <div className="project-image">
             <div className="wrap">
-            <SanityImage image_data={ listImage } have_source={true}/>
+            <SanityImage image_data={ listImage } image_alt={ featured_image.alt } have_source={true}/>
             </div>
           </div>
 
