@@ -63,17 +63,17 @@ export default function ServicesListSection() {
             <p>Chocolates Valor</p>
             <p>El Corte Inglés</p>
             <p>Teoxane</p>
-            <p><Link href="/project/instituto-ginecologico-bau"><a>Instituto Ginecológico Bau</a></Link></p>
+            <p>Instituto Ginecológico Bau</p>
             <p>Dg Arquitectos</p>
-            <p><Link href="/project/zalamero"><a>Zalamero</a></Link></p>
-            <p><Link href="/project/bowi-croqueta"><a>Bowi Croqueta</a></Link></p>
-            <p><Link href="/project/better-by-letter"><a>Bettter by Letter</a></Link></p>
+            <p>Zalamero</p>
+            <p>Bowi Croqueta</p>
+            <p>Bettter by Letter</p>
             <p>Calma Chechu</p>
             <p>Fabián León Masterchef</p>
             <p>The Sunglasses Box</p>
             <p>Banak</p>
             <p>R de Room</p>
-            <p><Link href="/project/lada"><a>Lada Interiorismo</a></Link></p>
+            <p>Lada Interiorismo</p>
             <p>Dr. Anido</p>
 
           </ServicesListItem>
